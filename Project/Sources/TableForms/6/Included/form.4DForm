@@ -1,0 +1,160 @@
+{
+	"destination": "detailScreen",
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"markerHeader": 17,
+	"markerBody": 34,
+	"markerBreak": 34,
+	"markerFooter": 34,
+	"events": [
+		"onDisplayDetail"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Fnd_IO_ColumnBackground": {
+					"type": "picture",
+					"top": 0,
+					"left": 0,
+					"width": 205,
+					"height": 17,
+					"sizingX": "grow",
+					"pictureFormat": "scaled",
+					"picture": "Images/Fnd_IO_ColumnBackground.png"
+				},
+				"RowBackground": {
+					"type": "rectangle",
+					"top": 17,
+					"left": 0,
+					"width": 205,
+					"height": 18,
+					"stroke": "#FFFFFF",
+					"fill": "#FFFFFF"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 1,
+					"left": 3,
+					"width": 51,
+					"height": 20,
+					"class": "ColumnHeader",
+					"text": "<<>Invoices_NumberColumnLabel_t>"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 1,
+					"left": 121,
+					"width": 77,
+					"height": 20,
+					"class": "ColumnHeader",
+					"text": "<?8>"
+				},
+				"Invoice Number": {
+					"type": "input",
+					"top": 18,
+					"left": 3,
+					"width": 51,
+					"height": 15,
+					"dataSource": "[Invoices:6]Invoice Number:3",
+					"dataSourceTypeHint": "integer",
+					"class": "ListItem",
+					"textAlign": "left",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Invoices_InvoiceNumberFormat"
+					}
+				},
+				"Invoice Total": {
+					"type": "input",
+					"top": 18,
+					"left": 117,
+					"width": 81,
+					"height": 15,
+					"dataSource": "[Invoices:6]Total:8",
+					"dataSourceTypeHint": "number",
+					"class": "ListItem",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Demo_NumberFormat"
+					}
+				},
+				"Picture4": {
+					"type": "picture",
+					"top": 0,
+					"left": 116,
+					"width": 1,
+					"height": 16,
+					"pictureFormat": "scaled"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 1,
+					"left": 60,
+					"width": 54,
+					"height": 20,
+					"class": "ColumnHeader",
+					"text": "<<>Invoices_DateColumnLabel_t>"
+				},
+				"Invoice Date": {
+					"type": "input",
+					"top": 18,
+					"left": 60,
+					"width": 54,
+					"height": 15,
+					"dataSource": "[Invoices:6]Invoice Date:4",
+					"dataSourceTypeHint": "date",
+					"class": "ListItem",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none"
+				},
+				"Picture5": {
+					"type": "picture",
+					"top": 0,
+					"left": 55,
+					"width": 1,
+					"height": 16,
+					"pictureFormat": "scaled"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"geometryStamp": 7,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

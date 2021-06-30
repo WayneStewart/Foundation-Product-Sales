@@ -1,0 +1,94 @@
+.ColumnHeader {
+	font-family: Lucida Grande;
+	font-size: 11px;
+}
+
+.Default {
+	font-family: Lucida Grande;
+	font-size: 11px;
+}
+
+.Fnd_IO_LargeControl {
+	font-family: System Font;
+	font-size: 13px;
+}
+
+.Fnd_LargeControl {
+	font-family: System Font;
+	font-size: 13px;
+}
+
+.Fnd_Tlbr_InfoLabel {
+	font-family: System Font;
+	font-size: 11px;
+}
+
+.Invoice_Field {
+	font-family: Helvetica;
+	font-size: 10px;
+}
+
+.Invoice_Header {
+	font-family: Helvetica;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.Invoice_Label {
+	font-family: Helvetica;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+.Invoice_LargeText {
+	font-family: Helvetica;
+	font-size: 36px;
+}
+
+.Invoice_SmallLabel {
+	font-family: Helvetica;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+.LargeControl {
+	font-family: Lucida Grande;
+	font-size: 13px;
+}
+
+.LargeField {
+	font-family: Lucida Grande;
+	font-size: 13px;
+}
+
+.LargeLabel {
+	font-family: Lucida Grande;
+	font-size: 13px;
+}
+
+.ListItem {
+	font-family: Lucida Grande;
+	font-size: 12px;
+}
+
+.ReportData {
+	font-family: Helvetica;
+	font-size: 10px;
+}
+
+.ReportHeader12 {
+	font-family: Helvetica;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.SmallControl {
+	font-family: Lucida Grande;
+	font-size: 11px;
+}
+
+.SmallLabel {
+	font-family: Lucida Grande;
+	font-size: 11px;
+}
+

@@ -1,0 +1,181 @@
+{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"markerHeader": 68,
+	"markerBody": 85,
+	"markerBreak": 85,
+	"markerFooter": 117,
+	"events": [
+		"onPrintingDetail"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text6": {
+					"type": "text",
+					"top": 30,
+					"left": 50,
+					"width": 478,
+					"height": 12,
+					"sizingX": "grow",
+					"stroke": "#000000",
+					"class": "ReportHeader12",
+					"fontWeight": "bold",
+					"text": "Products"
+				},
+				"Line1": {
+					"type": "line",
+					"top": 66,
+					"left": 50,
+					"width": 478
+				},
+				"Line3": {
+					"type": "line",
+					"top": 87,
+					"left": 50,
+					"width": 478
+				},
+				"Department Name1": {
+					"type": "input",
+					"top": 70,
+					"left": 123,
+					"width": 120,
+					"height": 12,
+					"dataSource": "[Products:5]Product Name:3",
+					"stroke": "#000000",
+					"class": "ReportData",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/Shell_StringFilter"
+					}
+				},
+				"Department Name4": {
+					"type": "input",
+					"top": 70,
+					"left": 245,
+					"width": 215,
+					"height": 12,
+					"sizingY": "move",
+					"dataSource": "[Products:5]Description:4",
+					"stroke": "#000000",
+					"class": "ReportData",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/Shell_StringFilter"
+					}
+				},
+				"Text5": {
+					"type": "text",
+					"top": 53,
+					"left": 51,
+					"width": 60,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "ReportData",
+					"text": "Number"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 53,
+					"left": 245,
+					"width": 60,
+					"height": 12,
+					"sizingY": "move",
+					"stroke": "#000000",
+					"class": "ReportData",
+					"text": "Description"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 53,
+					"left": 477,
+					"width": 50,
+					"height": 12,
+					"sizingY": "move",
+					"stroke": "#000000",
+					"class": "ReportData",
+					"textAlign": "right",
+					"text": "List Price"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 53,
+					"left": 123,
+					"width": 60,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "ReportData",
+					"text": "Name"
+				},
+				"Department Name2": {
+					"type": "input",
+					"top": 70,
+					"left": 464,
+					"width": 63,
+					"height": 12,
+					"sizingY": "move",
+					"dataSource": "[Products:5]List Price:5",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "ReportData",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/Shell_StringFilter"
+					}
+				},
+				"Department Name6": {
+					"type": "input",
+					"top": 70,
+					"left": 51,
+					"width": 70,
+					"height": 12,
+					"dataSource": "[Products:5]Product Number:2",
+					"stroke": "#000000",
+					"class": "ReportData",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/Shell_StringFilter"
+					}
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

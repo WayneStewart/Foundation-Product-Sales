@@ -1,0 +1,15 @@
+{
+	"Invoices_InvoiceNumberFormat": "000000",
+	"Products_ProductNumberFilter": "~\"A-Z;0-9; ;,;.;-\"",
+	"Demo_EmailFilter": "&\"A-Z;a-z;0-9;.;-;_;~;@;!;/;#\"",
+	"Demo_NumberFormat": "###,###,###,##0.##;-###,###,###,##0.##",
+	"Demo_PhoneFilter": "~\"0-9;A-P;R-Y;-;/;(;); ;.\"",
+	"Demo_StateFilter": "~\"A-Z\"",
+	"Demo_StringFilter": "&\" -~;Ä-˚\"",
+	"Demo_TextFilter": "&\" ; -~;Ä-˚\"",
+	"Demo_URLFilter": "&\"A-Z;a-z;0-9;.;-;_;~;!;:;/;#;@;&;?;+;%;=;\"",
+	"Demo_ZipCodeFilter": "~\"A-Z;0-9; ;-\"",
+	"Fnd_Dlg_RequestFilter": "&\" -~;Ä-˚\"",
+	"Fnd_Loc_CodeFilter": "&\"A-Z;a-z;0-9;-;_;\"",
+	"Products_ProductNumberFormat": "########"
+}

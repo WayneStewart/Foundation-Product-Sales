@@ -1,0 +1,158 @@
+{
+	"destination": "detailScreen",
+	"rightMargin": 18,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onClick"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"LineItems_CancelButton_i": {
+					"type": "button",
+					"top": 222,
+					"left": 199,
+					"width": 69,
+					"height": 20,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "LineItems_CancelButton_i",
+					"action": "cancel",
+					"text": "Cancel",
+					"class": "LargeControl",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"LineItems_OKButton_i": {
+					"type": "button",
+					"top": 222,
+					"left": 279,
+					"width": 69,
+					"height": 20,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "LineItems_OKButton_i",
+					"action": "accept",
+					"text": "OK",
+					"class": "LargeControl",
+					"focusable": false,
+					"defaultButton": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"List Box": {
+					"type": "listbox",
+					"top": 20,
+					"left": 20,
+					"width": 326,
+					"height": 183,
+					"resizingMode": "legacy",
+					"scrollbarHorizontal": "hidden",
+					"events": [
+						"onClick",
+						"onDataChange",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"alternateFill": "#F1F6FE",
+					"selectionMode": "single",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"columns": [
+						{
+							"name": "ProductNumberColumn",
+							"dataSource": "LineItems_ProductNumbers_at",
+							"width": 89,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "ProductNumberHeader",
+								"text": "Header4"
+							},
+							"footer": {
+								"name": "Footer4"
+							}
+						},
+						{
+							"name": "ProductNameColumn",
+							"dataSource": "LineItems_ProductNames_at",
+							"width": 150,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "ProductNameHeader",
+								"text": "Product Name"
+							},
+							"footer": {
+								"name": "Footer5"
+							},
+							"wordwrap": "normal"
+						},
+						{
+							"name": "PriceColumn",
+							"dataSource": "LineItems_ProductPrices_ar",
+							"width": 70,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "PriceHeader",
+								"text": "List Price"
+							},
+							"footer": {
+								"name": "Footer6"
+							},
+							"dataSourceTypeHint": "number"
+						}
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"geometryStamp": 27,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

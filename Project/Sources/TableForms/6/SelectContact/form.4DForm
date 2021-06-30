@@ -1,0 +1,145 @@
+{
+	"destination": "detailScreen",
+	"rightMargin": 18,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onSelectionChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Invoices_CancelButton_i": {
+					"type": "button",
+					"top": 222,
+					"left": 199,
+					"width": 69,
+					"height": 20,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "Invoices_CancelButton_i",
+					"action": "cancel",
+					"text": "Cancel",
+					"class": "LargeControl",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Invoices_OKButton_i": {
+					"type": "button",
+					"top": 222,
+					"left": 279,
+					"width": 69,
+					"height": 20,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "Invoices_OKButton_i",
+					"action": "accept",
+					"text": "OK",
+					"class": "LargeControl",
+					"focusable": false,
+					"defaultButton": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"List Box": {
+					"type": "listbox",
+					"top": 20,
+					"left": 20,
+					"width": 326,
+					"height": 183,
+					"resizingMode": "legacy",
+					"selectionMode": "single",
+					"scrollbarHorizontal": "automatic",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"events": [
+						"onClick",
+						"onDataChange",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Invoices_ContactNames_at1",
+							"dataSource": "Invoices_ContactNames_at",
+							"width": 142,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"wordwrap": "normal",
+							"alternateFill": "#F1F6FE",
+							"rowHeightAuto": true,
+							"fontFamily": "Lucida Grande",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header3",
+								"text": "Name"
+							},
+							"footer": {
+								"name": "Footer3"
+							}
+						},
+						{
+							"name": "Invoices_ContactCompanies_at1",
+							"dataSource": "Invoices_ContactCompanies_at",
+							"width": 169,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"wordwrap": "normal",
+							"alternateFill": "#F1F6FE",
+							"rowHeightAuto": true,
+							"fontFamily": "Lucida Grande",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header4",
+								"text": "Company"
+							},
+							"footer": {
+								"name": "Footer4"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

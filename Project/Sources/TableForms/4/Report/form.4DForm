@@ -1,0 +1,98 @@
+{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"markerHeader": 58,
+	"markerBody": 129,
+	"markerBreak": 129,
+	"markerFooter": 161,
+	"events": [
+		"onPrintingDetail"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text6": {
+					"type": "text",
+					"top": 30,
+					"left": 50,
+					"width": 478,
+					"height": 12,
+					"sizingX": "grow",
+					"stroke": "#000000",
+					"class": "ReportHeader12",
+					"fontWeight": "bold",
+					"text": "Contacts"
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 61,
+					"left": 50,
+					"width": 280,
+					"height": 60,
+					"dataSource": "Contacts_NameAddress_t",
+					"class": "ReportData",
+					"textAlign": "left",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none"
+				},
+				"Variable2": {
+					"type": "input",
+					"top": 61,
+					"left": 330,
+					"width": 198,
+					"height": 60,
+					"dataSource": "Contacts_PhoneEmail_t",
+					"class": "ReportData",
+					"textAlign": "right",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none"
+				},
+				"Line1": {
+					"type": "line",
+					"top": 56,
+					"left": 50,
+					"width": 478
+				},
+				"Line2": {
+					"type": "line",
+					"top": 127,
+					"left": 50,
+					"width": 478,
+					"strokeWidth": 0.1
+				},
+				"Line3": {
+					"type": "line",
+					"top": 131,
+					"left": 50,
+					"width": 478
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

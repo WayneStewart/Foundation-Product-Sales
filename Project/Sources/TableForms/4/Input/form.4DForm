@@ -1,0 +1,672 @@
+{
+	"destination": "detailScreen",
+	"inheritedForm": "Fnd_IO_InputForm",
+	"windowSizingX": "fixed",
+	"windowMinHeight": 350,
+	"rightMargin": 20,
+	"bottomMargin": 60,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onActivate",
+		"onDataChange",
+		"onCloseBox",
+		"onResize"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 197,
+					"left": 401,
+					"width": 212,
+					"height": 93,
+					"stroke": "#FFFFFF",
+					"sizingY": "move"
+				},
+				"ContactsFirstNameField": {
+					"type": "input",
+					"top": 21,
+					"left": 94,
+					"width": 134,
+					"height": 16,
+					"dataSource": "[Contacts:4]First Name:2",
+					"class": "LargeField",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/Demo_StringFilter"
+					},
+					"method": "ObjectMethods/ContactsFirstNameField.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"ContactsLastNameField": {
+					"type": "input",
+					"top": 21,
+					"left": 244,
+					"width": 135,
+					"height": 16,
+					"dataSource": "[Contacts:4]Last Name:3",
+					"class": "LargeField",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/Demo_StringFilter"
+					},
+					"method": "ObjectMethods/ContactsLastNameField.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"ContactsCompanyField": {
+					"type": "input",
+					"top": 63,
+					"left": 94,
+					"width": 285,
+					"height": 16,
+					"dataSource": "[Contacts:4]Company:4",
+					"class": "LargeField",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/Demo_StringFilter"
+					},
+					"method": "ObjectMethods/ContactsCompanyField.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"ContactsAddressField": {
+					"type": "input",
+					"top": 94,
+					"left": 94,
+					"width": 285,
+					"height": 16,
+					"dataSource": "[Contacts:4]Address:5",
+					"class": "LargeField",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/Demo_StringFilter"
+					},
+					"method": "ObjectMethods/ContactsAddressField.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Contacts_USCityField": {
+					"type": "input",
+					"top": 125,
+					"left": 94,
+					"width": 134,
+					"height": 16,
+					"dataSource": "[Contacts:4]City:6",
+					"class": "LargeField",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"method": "ObjectMethods/Contacts_USCityField.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Contacts_USStateField": {
+					"type": "input",
+					"top": 125,
+					"left": 244,
+					"width": 25,
+					"height": 16,
+					"dataSource": "[Contacts:4]State:7",
+					"class": "LargeField",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": "~a##",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Contacts_USZipField": {
+					"type": "input",
+					"top": 125,
+					"left": 285,
+					"width": 94,
+					"height": 16,
+					"dataSource": "[Contacts:4]Postal Code:8",
+					"class": "LargeField",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"method": "ObjectMethods/Contacts_USZipField.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Contacts_OtherPostalField": {
+					"type": "input",
+					"top": 125,
+					"left": 94,
+					"width": 134,
+					"height": 16,
+					"dataSource": "[Contacts:4]Postal Code:8",
+					"class": "LargeField",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/Demo_ZipCodeFilter"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Contacts_OtherCityField": {
+					"type": "input",
+					"top": 125,
+					"left": 244,
+					"width": 135,
+					"height": 16,
+					"dataSource": "[Contacts:4]City:6",
+					"class": "LargeField",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/Demo_StringFilter"
+					},
+					"method": "ObjectMethods/Contacts_OtherCityField.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Contacts_CountryPopup_at": {
+					"type": "combo",
+					"top": 165,
+					"left": 92,
+					"width": 289,
+					"height": 20,
+					"dataSource": "Contacts_CountryPopup_at",
+					"class": "LargeField",
+					"method": "ObjectMethods/Contacts_CountryPopup_at.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"ContactsPhoneField": {
+					"type": "input",
+					"top": 198,
+					"left": 94,
+					"width": 134,
+					"height": 16,
+					"dataSource": "[Contacts:4]Phone:10",
+					"class": "LargeField",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/Demo_PhoneFilter"
+					},
+					"method": "ObjectMethods/ContactsPhoneField.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"ContactsFaxField": {
+					"type": "input",
+					"top": 198,
+					"left": 244,
+					"width": 135,
+					"height": 16,
+					"dataSource": "[Contacts:4]Fax:11",
+					"class": "LargeField",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/Demo_PhoneFilter"
+					},
+					"method": "ObjectMethods/ContactsFaxField.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"ContactsEmailField": {
+					"type": "input",
+					"top": 242,
+					"left": 94,
+					"width": 258,
+					"height": 16,
+					"dataSource": "[Contacts:4]Email Address:12",
+					"class": "LargeField",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/Demo_EmailFilter"
+					},
+					"method": "ObjectMethods/ContactsEmailField.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"ContactsWebSiteField": {
+					"type": "input",
+					"top": 273,
+					"left": 94,
+					"width": 258,
+					"height": 16,
+					"dataSource": "[Contacts:4]Web Site:13",
+					"class": "LargeField",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/Demo_URLFilter"
+					},
+					"method": "ObjectMethods/ContactsWebSiteField.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"ContactsNotesField": {
+					"type": "input",
+					"top": 38,
+					"left": 402,
+					"width": 272,
+					"height": 122,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "[Contacts:4]Notes:14",
+					"class": "LargeField",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/Demo_TextFilter"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Contacts_NewInvoiceButton_i": {
+					"type": "button",
+					"top": 196,
+					"left": 632,
+					"width": 59,
+					"height": 19,
+					"sizingY": "move",
+					"dataSource": "Contacts_NewInvoiceButton_i",
+					"text": "New",
+					"class": "SmallControl",
+					"focusable": false,
+					"method": "ObjectMethods/Contacts_NewInvoiceButton_i.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Contacts_ViewInvoiceButton_i": {
+					"type": "button",
+					"top": 226,
+					"left": 632,
+					"width": 59,
+					"height": 19,
+					"sizingY": "move",
+					"dataSource": "Contacts_ViewInvoiceButton_i",
+					"text": "View",
+					"class": "SmallControl",
+					"focusable": false,
+					"method": "ObjectMethods/Contacts_ViewInvoiceButton_i.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Contacts_DeleteInvoiceButton_i": {
+					"type": "button",
+					"top": 256,
+					"left": 632,
+					"width": 59,
+					"height": 19,
+					"sizingY": "move",
+					"dataSource": "Contacts_DeleteInvoiceButton_i",
+					"text": "Delete",
+					"class": "SmallControl",
+					"focusable": false,
+					"method": "ObjectMethods/Contacts_DeleteInvoiceButton_i.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text4": {
+					"type": "text",
+					"top": 15,
+					"left": 399,
+					"width": 291,
+					"height": 16,
+					"class": "LargeLabel",
+					"text": "<?14><<>Gen_Colon_t>"
+				},
+				"Contacts_FirstNameLabel": {
+					"type": "text",
+					"top": 40,
+					"left": 93,
+					"width": 135,
+					"height": 13,
+					"class": "SmallLabel",
+					"textAlign": "left",
+					"text": "<<>Contacts_FirstNameLabel_t>"
+				},
+				"Text11": {
+					"type": "text",
+					"top": 40,
+					"left": 242,
+					"width": 138,
+					"height": 13,
+					"class": "SmallLabel",
+					"textAlign": "left",
+					"text": "<<>Contacts_LastNameLabel_t>"
+				},
+				"Contacts_USCityLabel": {
+					"type": "text",
+					"top": 144,
+					"left": 93,
+					"width": 134,
+					"height": 13,
+					"class": "SmallLabel",
+					"textAlign": "left",
+					"text": "<?6>"
+				},
+				"Contacts_VoiceLabel": {
+					"type": "text",
+					"top": 217,
+					"left": 93,
+					"width": 134,
+					"height": 13,
+					"class": "SmallLabel",
+					"textAlign": "left",
+					"text": "<<>Contacts_VoiceLabel_t>"
+				},
+				"Text16": {
+					"type": "text",
+					"top": 217,
+					"left": 243,
+					"width": 136,
+					"height": 13,
+					"class": "SmallLabel",
+					"textAlign": "left",
+					"text": "<<>Contacts_FaxLabel_t>"
+				},
+				"Contacts_EmailButton_i": {
+					"type": "pictureButton",
+					"top": 240,
+					"left": 362,
+					"width": 20,
+					"height": 20,
+					"dataSource": "Contacts_EmailButton_i",
+					"columnCount": 3,
+					"picture": "/RESOURCES/Images/Gen_EmailButton.png",
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Contacts_EmailButton_i.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Contacts_WebButton_i": {
+					"type": "pictureButton",
+					"top": 271,
+					"left": 362,
+					"width": 20,
+					"height": 20,
+					"dataSource": "Contacts_WebButton_i",
+					"columnCount": 3,
+					"picture": "/RESOURCES/Images/Gen_WebButton.png",
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Contacts_WebButton_i.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text7": {
+					"type": "text",
+					"top": 175,
+					"left": 399,
+					"width": 226,
+					"height": 16,
+					"sizingY": "move",
+					"class": "LargeLabel",
+					"text": "<?[6]><<>Gen_Colon_t>"
+				},
+				"Contacts_OtherCityLabel": {
+					"type": "text",
+					"top": 144,
+					"left": 243,
+					"width": 135,
+					"height": 13,
+					"class": "SmallLabel",
+					"textAlign": "left",
+					"text": "<?6>"
+				},
+				"Contacts_OtherPostalLabel": {
+					"type": "text",
+					"top": 144,
+					"left": 93,
+					"width": 136,
+					"height": 13,
+					"class": "SmallLabel",
+					"textAlign": "left",
+					"text": "<?8>"
+				},
+				"Contacts_USZipLabel": {
+					"type": "input",
+					"top": 144,
+					"left": 284,
+					"width": 95,
+					"height": 13,
+					"dataSource": "Contacts_PostalCodeLabel_t",
+					"class": "SmallLabel",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none"
+				},
+				"Contacts_USStateLabel": {
+					"type": "input",
+					"top": 144,
+					"left": 243,
+					"width": 35,
+					"height": 13,
+					"dataSource": "Contacts_StateLabel_t",
+					"class": "SmallLabel",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none"
+				},
+				"Contact_InvoicesSubform": {
+					"type": "subform",
+					"top": 197,
+					"left": 401,
+					"width": 202,
+					"height": 93,
+					"sizingY": "move",
+					"dataSourceTypeHint": "text",
+					"table": 6,
+					"detailForm": "DummyDetail",
+					"listForm": "Included",
+					"focusable": false,
+					"scrollbarVertical": "visible",
+					"enterableInList": false,
+					"deletableInList": false,
+					"doubleClickInRowAction": "displaySubrecord",
+					"selectionMode": "single",
+					"printFrame": "variable",
+					"borderStyle": "sunken"
+				},
+				"Contacts_NameLabel_t": {
+					"type": "input",
+					"top": 21,
+					"left": 20,
+					"width": 66,
+					"height": 16,
+					"dataSource": "<>Contacts_NameLabel_t",
+					"class": "LargeLabel",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none"
+				},
+				"Contacts_CompanyLabel_t": {
+					"type": "input",
+					"top": 63,
+					"left": 20,
+					"width": 66,
+					"height": 16,
+					"dataSource": "<>Contacts_CompanyLabel_t",
+					"class": "LargeLabel",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none"
+				},
+				"Contacts_AddressLabel_t": {
+					"type": "input",
+					"top": 94,
+					"left": 20,
+					"width": 66,
+					"height": 16,
+					"dataSource": "<>Contacts_AddressLabel_t",
+					"class": "LargeLabel",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none"
+				},
+				"Contacts_CountryLabel_t": {
+					"type": "input",
+					"top": 167,
+					"left": 20,
+					"width": 66,
+					"height": 16,
+					"dataSource": "<>Contacts_CountryLabel_t",
+					"class": "LargeLabel",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none"
+				},
+				"Contacts_PhoneLabel_t": {
+					"type": "input",
+					"top": 198,
+					"left": 20,
+					"width": 66,
+					"height": 16,
+					"dataSource": "<>Contacts_PhoneLabel_t",
+					"class": "LargeLabel",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none"
+				},
+				"Contacts_EmailLabel_t": {
+					"type": "input",
+					"top": 242,
+					"left": 20,
+					"width": 66,
+					"height": 16,
+					"dataSource": "<>Contacts_EmailLabel_t",
+					"class": "LargeLabel",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none"
+				},
+				"Contacts_WebSiteLabel_t": {
+					"type": "input",
+					"top": 272,
+					"left": 20,
+					"width": 66,
+					"height": 16,
+					"dataSource": "<>Contacts_WebSiteLabel_t",
+					"class": "LargeLabel",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"geometryStamp": 34,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

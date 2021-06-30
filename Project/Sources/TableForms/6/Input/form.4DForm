@@ -1,0 +1,466 @@
+{
+	"destination": "detailScreen",
+	"inheritedForm": "Fnd_IO_InputForm",
+	"windowSizingX": "fixed",
+	"windowMinHeight": 439,
+	"width": 526,
+	"height": 439,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onActivate",
+		"onGettingFocus",
+		"onDataChange",
+		"onCloseBox",
+		"onUnload",
+		"onResize"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text10": {
+					"type": "text",
+					"top": 272,
+					"left": 282,
+					"width": 116,
+					"height": 16,
+					"sizingY": "move",
+					"class": "LargeLabel",
+					"textAlign": "right",
+					"text": "<?5><<>Gen_Colon_t>"
+				},
+				"Invoice Number": {
+					"type": "input",
+					"top": 21,
+					"left": 81,
+					"width": 52,
+					"height": 16,
+					"dataSource": "[Invoices:6]Invoice Number:3",
+					"dataSourceTypeHint": "integer",
+					"class": "LargeField",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Invoices_InvoiceNumberFormat"
+					},
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/Shell_StringFilter"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Invoice Date": {
+					"type": "input",
+					"top": 21,
+					"left": 399,
+					"width": 82,
+					"height": 16,
+					"dataSource": "[Invoices:6]Invoice Date:4",
+					"dataSourceTypeHint": "date",
+					"class": "LargeField",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": "!0&9##/##/##",
+					"method": "ObjectMethods/Invoice Date.4dm",
+					"events": [
+						"onBeforeKeystroke",
+						"onDataChange",
+						"onAfterKeystroke"
+					]
+				},
+				"Invoices_NewContactButton_i": {
+					"type": "button",
+					"top": 92,
+					"left": 241,
+					"width": 50,
+					"height": 19,
+					"dataSource": "Invoices_NewContactButton_i",
+					"text": "New",
+					"class": "SmallControl",
+					"focusable": false,
+					"method": "ObjectMethods/Invoices_NewContactButton_i.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invoices_SelectContactButton_i": {
+					"type": "button",
+					"top": 92,
+					"left": 302,
+					"width": 71,
+					"height": 19,
+					"dataSource": "Invoices_SelectContactButton_i",
+					"text": "Select...",
+					"class": "SmallControl",
+					"focusable": false,
+					"method": "ObjectMethods/Invoices_SelectContactButton_i.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invoices_ClearContactButton_i": {
+					"type": "button",
+					"top": 92,
+					"left": 384,
+					"width": 57,
+					"height": 19,
+					"dataSource": "Invoices_ClearContactButton_i",
+					"text": "Clear",
+					"class": "SmallControl",
+					"focusable": false,
+					"method": "ObjectMethods/Invoices_ClearContactButton_i.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invoices_ViewContactButton_i": {
+					"type": "button",
+					"top": 92,
+					"left": 452,
+					"width": 54,
+					"height": 19,
+					"dataSource": "Invoices_ViewContactButton_i",
+					"text": "View",
+					"class": "SmallControl",
+					"focusable": false,
+					"method": "ObjectMethods/Invoices_ViewContactButton_i.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Subform1": {
+					"type": "subform",
+					"top": 132,
+					"left": 20,
+					"width": 470,
+					"height": 127,
+					"sizingY": "grow",
+					"dataSourceTypeHint": "text",
+					"table": 7,
+					"listForm": "Included",
+					"scrollbarVertical": "visible",
+					"deletableInList": false,
+					"selectionMode": "single",
+					"printFrame": "variable",
+					"borderStyle": "sunken"
+				},
+				"Invoices_AddLineItemButton_i": {
+					"type": "button",
+					"top": 272,
+					"left": 19,
+					"width": 74,
+					"height": 19,
+					"sizingY": "move",
+					"dataSource": "Invoices_AddLineItemButton_i",
+					"text": "Add Item",
+					"class": "SmallControl",
+					"focusable": false,
+					"method": "ObjectMethods/Invoices_AddLineItemButton_i.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invoices_LookupLineItemButton_i": {
+					"type": "button",
+					"top": 272,
+					"left": 104,
+					"width": 92,
+					"height": 19,
+					"sizingY": "move",
+					"dataSource": "Invoices_LookupLineItemButton_i",
+					"text": "Lookup Item",
+					"class": "SmallControl",
+					"focusable": false,
+					"method": "ObjectMethods/Invoices_LookupLineItemButton_i.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invoices_DeleteLineItemButton_i": {
+					"type": "button",
+					"top": 272,
+					"left": 207,
+					"width": 59,
+					"height": 19,
+					"sizingY": "move",
+					"dataSource": "Invoices_DeleteLineItemButton_i",
+					"text": "Delete",
+					"class": "SmallControl",
+					"focusable": false,
+					"method": "ObjectMethods/Invoices_DeleteLineItemButton_i.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invoice Tax": {
+					"type": "input",
+					"top": 302,
+					"left": 406,
+					"width": 85,
+					"height": 16,
+					"sizingY": "move",
+					"dataSource": "[Invoices:6]Tax:6",
+					"dataSourceTypeHint": "number",
+					"class": "LargeField",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"method": "ObjectMethods/Invoice Tax.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Invoice Shipping": {
+					"type": "input",
+					"top": 332,
+					"left": 406,
+					"width": 85,
+					"height": 16,
+					"sizingY": "move",
+					"dataSource": "[Invoices:6]Shipping:7",
+					"dataSourceTypeHint": "number",
+					"class": "LargeField",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"method": "ObjectMethods/Invoice Shipping.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Invoices_TermsPopup_at": {
+					"type": "combo",
+					"top": 360,
+					"left": 72,
+					"width": 193,
+					"height": 20,
+					"sizingY": "move",
+					"dataSource": "Invoices_TermsPopup_at",
+					"class": "LargeField",
+					"method": "ObjectMethods/Invoices_TermsPopup_at.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Invoices_PrintButton_i": {
+					"type": "button",
+					"top": 399,
+					"left": 160,
+					"width": 69,
+					"height": 20,
+					"sizingY": "move",
+					"dataSource": "Invoices_PrintButton_i",
+					"shortcutKey": "p",
+					"shortcutAccel": true,
+					"text": "Print",
+					"class": "LargeControl",
+					"focusable": false,
+					"method": "ObjectMethods/Invoices_PrintButton_i.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Invoice Subtotal": {
+					"type": "input",
+					"top": 272,
+					"left": 406,
+					"width": 85,
+					"height": 16,
+					"sizingY": "move",
+					"dataSource": "[Invoices:6]Subtotal:5",
+					"dataSourceTypeHint": "number",
+					"class": "LargeField",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/Shell_StringFilter"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 302,
+					"left": 282,
+					"width": 116,
+					"height": 16,
+					"sizingY": "move",
+					"class": "LargeLabel",
+					"textAlign": "right",
+					"text": "<?6><<>Gen_Colon_t>"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 332,
+					"left": 282,
+					"width": 116,
+					"height": 16,
+					"sizingY": "move",
+					"class": "LargeLabel",
+					"textAlign": "right",
+					"text": "<?7><<>Gen_Colon_t>"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 362,
+					"left": 282,
+					"width": 116,
+					"height": 16,
+					"sizingY": "move",
+					"class": "LargeLabel",
+					"textAlign": "right",
+					"text": "<?8><<>Gen_Colon_t>"
+				},
+				"Invoice Total": {
+					"type": "input",
+					"top": 362,
+					"left": 406,
+					"width": 85,
+					"height": 16,
+					"sizingY": "move",
+					"dataSource": "[Invoices:6]Total:8",
+					"dataSourceTypeHint": "number",
+					"class": "LargeField",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/Shell_StringFilter"
+					},
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Invoices_ContactName_t": {
+					"type": "input",
+					"top": 63,
+					"left": 92,
+					"width": 413,
+					"height": 16,
+					"dataSource": "Invoices_ContactName_t",
+					"class": "LargeField",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none"
+				},
+				"Invoices_TermsLabel_t": {
+					"type": "input",
+					"top": 362,
+					"left": 20,
+					"width": 45,
+					"height": 16,
+					"sizingY": "move",
+					"dataSource": "<>Invoices_TermsLabel_t",
+					"class": "LargeLabel",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none"
+				},
+				"Invoices_NumberLabel_t": {
+					"type": "input",
+					"top": 21,
+					"left": 20,
+					"width": 53,
+					"height": 16,
+					"dataSource": "<>Invoices_NumberLabel_t",
+					"class": "LargeLabel",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none"
+				},
+				"Invoices_DateLabel_t": {
+					"type": "input",
+					"top": 21,
+					"left": 217,
+					"width": 174,
+					"height": 16,
+					"dataSource": "<>Invoices_DateLabel_t",
+					"class": "LargeLabel",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none"
+				},
+				"Invoices_ContactLabel_t": {
+					"type": "input",
+					"top": 63,
+					"left": 20,
+					"width": 64,
+					"height": 16,
+					"dataSource": "<>Invoices_ContactLabel_t",
+					"class": "LargeLabel",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none"
+				},
+				"Invoices_CalendarButton_i": {
+					"type": "pictureButton",
+					"top": 21,
+					"left": 490,
+					"width": 16,
+					"height": 16,
+					"dataSource": "Invoices_CalendarButton_i",
+					"rowCount": 3,
+					"picture": "/RESOURCES/Images/Gen_Calendar.png",
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Invoices_CalendarButton_i.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

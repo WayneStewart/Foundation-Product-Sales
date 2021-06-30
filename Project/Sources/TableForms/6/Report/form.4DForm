@@ -1,0 +1,245 @@
+{
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"markerHeader": 58,
+	"markerBody": 129,
+	"markerBreak": 129,
+	"markerFooter": 161,
+	"events": [
+		"onPrintingDetail"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Text6": {
+					"type": "text",
+					"top": 30,
+					"left": 50,
+					"width": 478,
+					"height": 12,
+					"sizingX": "grow",
+					"stroke": "#000000",
+					"class": "ReportHeader12",
+					"fontWeight": "bold",
+					"text": "Invoices"
+				},
+				"Invoices_ContactInfo_t": {
+					"type": "input",
+					"top": 61,
+					"left": 342,
+					"width": 186,
+					"height": 60,
+					"dataSource": "Invoices_ContactInfo_t",
+					"class": "ReportData",
+					"textAlign": "left",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none"
+				},
+				"Line1": {
+					"type": "line",
+					"top": 56,
+					"left": 50,
+					"width": 478
+				},
+				"Line2": {
+					"type": "line",
+					"top": 127,
+					"left": 50,
+					"width": 478,
+					"strokeWidth": 0.1
+				},
+				"Line3": {
+					"type": "line",
+					"top": 131,
+					"left": 50,
+					"width": 478
+				},
+				"Text1": {
+					"type": "text",
+					"top": 61,
+					"left": 299,
+					"width": 40,
+					"height": 12,
+					"class": "ReportData",
+					"text": "Sold To:"
+				},
+				"Department Name1": {
+					"type": "input",
+					"top": 61,
+					"left": 93,
+					"width": 200,
+					"height": 12,
+					"dataSource": "[Invoices:6]Invoice Number:3",
+					"dataSourceTypeHint": "integer",
+					"stroke": "#000000",
+					"class": "ReportData",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Invoices_InvoiceNumberFormat"
+					},
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/Shell_StringFilter"
+					}
+				},
+				"Department Name4": {
+					"type": "input",
+					"top": 74,
+					"left": 93,
+					"width": 200,
+					"height": 12,
+					"sizingY": "move",
+					"dataSource": "[Invoices:6]Invoice Date:4",
+					"dataSourceTypeHint": "date",
+					"stroke": "#000000",
+					"class": "ReportData",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/Shell_StringFilter"
+					}
+				},
+				"Department Name5": {
+					"type": "input",
+					"top": 87,
+					"left": 93,
+					"width": 63,
+					"height": 12,
+					"sizingY": "move",
+					"dataSource": "[Invoices:6]Subtotal:5",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "ReportData",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/Shell_StringFilter"
+					}
+				},
+				"Text5": {
+					"type": "text",
+					"top": 61,
+					"left": 50,
+					"width": 50,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "ReportData",
+					"text": "Number:"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 74,
+					"left": 50,
+					"width": 50,
+					"height": 12,
+					"sizingY": "move",
+					"stroke": "#000000",
+					"class": "ReportData",
+					"text": "Date:"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 87,
+					"left": 50,
+					"width": 50,
+					"height": 12,
+					"sizingY": "move",
+					"stroke": "#000000",
+					"class": "ReportData",
+					"text": "Subtotal:"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 100,
+					"left": 50,
+					"width": 50,
+					"height": 12,
+					"sizingY": "move",
+					"stroke": "#000000",
+					"class": "ReportData",
+					"text": "Total:"
+				},
+				"Department Name7": {
+					"type": "input",
+					"top": 100,
+					"left": 93,
+					"width": 63,
+					"height": 12,
+					"sizingY": "move",
+					"dataSource": "[Invoices:6]Total:8",
+					"dataSourceTypeHint": "number",
+					"stroke": "#000000",
+					"class": "ReportData",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/Shell_StringFilter"
+					}
+				},
+				"Text7": {
+					"type": "text",
+					"top": 113,
+					"left": 50,
+					"width": 50,
+					"height": 12,
+					"stroke": "#000000",
+					"class": "ReportData",
+					"text": "Terms: "
+				},
+				"Department Name3": {
+					"type": "input",
+					"top": 113,
+					"left": 93,
+					"width": 200,
+					"height": 12,
+					"sizingY": "move",
+					"dataSource": "[Invoices:6]Terms:9",
+					"stroke": "#000000",
+					"class": "ReportData",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/Shell_StringFilter"
+					}
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

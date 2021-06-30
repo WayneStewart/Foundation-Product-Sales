@@ -1,0 +1,162 @@
+{
+	"destination": "detailScreen",
+	"inheritedForm": "Fnd_Tlbr_Toolbar",
+	"windowMinWidth": 620,
+	"windowMinHeight": 300,
+	"width": 620,
+	"height": 300,
+	"markerHeader": 93,
+	"markerBody": 111,
+	"markerBreak": 111,
+	"markerFooter": 111,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onHeader",
+		"onOutsideCall",
+		"onActivate",
+		"onDeactivate",
+		"onDoubleClick",
+		"onCloseBox",
+		"onUnload",
+		"onResize"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Fnd_IO_ColumnBackground": {
+					"type": "picture",
+					"top": 76,
+					"left": 0,
+					"width": 435,
+					"height": 17,
+					"sizingX": "grow",
+					"pictureFormat": "scaled",
+					"picture": "Images/Fnd_IO_ColumnBackground.png"
+				},
+				"Fnd_Tlbr_DataBackground": {
+					"type": "rectangle",
+					"top": 92,
+					"left": 0,
+					"width": 435,
+					"height": 208,
+					"sizingX": "grow",
+					"stroke": "#FFFFFF"
+				},
+				"S1_Field1": {
+					"type": "input",
+					"top": 95,
+					"left": 2,
+					"width": 89,
+					"height": 15,
+					"dataSource": "[Products:5]Product Number:2",
+					"class": "ListItem",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none"
+				},
+				"S1_Text1": {
+					"type": "text",
+					"top": 77,
+					"left": 3,
+					"width": 88,
+					"height": 13,
+					"class": "ColumnHeader",
+					"text": "<<>Products_NumberColumnLabel_t>"
+				},
+				"Picture1": {
+					"type": "picture",
+					"top": 77,
+					"left": 93,
+					"width": 1,
+					"height": 16,
+					"pictureFormat": "scaled"
+				},
+				"S1_Field2": {
+					"type": "input",
+					"top": 95,
+					"left": 96,
+					"width": 254,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "[Products:5]Product Name:3",
+					"class": "ListItem",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none"
+				},
+				"S1_Text2": {
+					"type": "text",
+					"top": 77,
+					"left": 98,
+					"width": 252,
+					"height": 13,
+					"sizingX": "grow",
+					"class": "ColumnHeader",
+					"text": "<?3>"
+				},
+				"Picture2": {
+					"type": "picture",
+					"top": 77,
+					"left": 352,
+					"width": 1,
+					"height": 16,
+					"sizingX": "move",
+					"pictureFormat": "scaled"
+				},
+				"S1_Field3": {
+					"type": "input",
+					"top": 95,
+					"left": 355,
+					"width": 76,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "[Products:5]List Price:5",
+					"dataSourceTypeHint": "number",
+					"class": "ListItem",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none"
+				},
+				"S1_Text3": {
+					"type": "text",
+					"top": 77,
+					"left": 357,
+					"width": 74,
+					"height": 13,
+					"sizingX": "grow",
+					"class": "ColumnHeader",
+					"textAlign": "right",
+					"text": "<?5>"
+				}
+			},
+			"entryOrder": [
+				"S1_Field1",
+				"S1_Field2",
+				"S1_Field3"
+			]
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

@@ -1,0 +1,332 @@
+{
+	"destination": "detailScreen",
+	"inheritedForm": "Fnd_IO_InputForm",
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 20,
+	"bottomMargin": 60,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onOutsideCall",
+		"onActivate",
+		"onCloseBox",
+		"onUnload",
+		"onResize"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Department Name6": {
+					"type": "input",
+					"top": 21,
+					"left": 94,
+					"width": 285,
+					"height": 16,
+					"dataSource": "[Company Info:8]Company Name:2",
+					"class": "LargeField",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/Demo_StringFilter"
+					},
+					"method": "ObjectMethods/Department Name6.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Department Name": {
+					"type": "input",
+					"top": 52,
+					"left": 94,
+					"width": 285,
+					"height": 64,
+					"dataSource": "[Company Info:8]Address:3",
+					"class": "LargeField",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"method": "ObjectMethods/Department Name.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					]
+				},
+				"Department Name12": {
+					"type": "input",
+					"top": 130,
+					"left": 94,
+					"width": 134,
+					"height": 16,
+					"dataSource": "[Company Info:8]Phone:4",
+					"class": "LargeField",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"method": "ObjectMethods/Department Name12.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Department Name13": {
+					"type": "input",
+					"top": 130,
+					"left": 244,
+					"width": 135,
+					"height": 16,
+					"dataSource": "[Company Info:8]Fax:5",
+					"class": "LargeField",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"method": "ObjectMethods/Department Name13.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Department Name3": {
+					"type": "input",
+					"top": 174,
+					"left": 94,
+					"width": 258,
+					"height": 16,
+					"dataSource": "[Company Info:8]Email Address:6",
+					"class": "LargeField",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/Demo_EmailFilter"
+					},
+					"method": "ObjectMethods/Department Name3.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Department Name4": {
+					"type": "input",
+					"top": 205,
+					"left": 94,
+					"width": 258,
+					"height": 16,
+					"dataSource": "[Company Info:8]Web Site:7",
+					"class": "LargeField",
+					"textAlign": "left",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/Demo_URLFilter"
+					},
+					"method": "ObjectMethods/Department Name4.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Company_TermsPopup_at": {
+					"type": "combo",
+					"top": 270,
+					"left": 119,
+					"width": 263,
+					"height": 20,
+					"dataSource": "Company_TermsPopup_at",
+					"class": "LargeField",
+					"method": "ObjectMethods/Company_TermsPopup_at.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Company_VoiceLabel": {
+					"type": "text",
+					"top": 149,
+					"left": 93,
+					"width": 136,
+					"height": 13,
+					"class": "SmallLabel",
+					"textAlign": "left",
+					"text": "<<>Company_VoiceLabel_t>"
+				},
+				"Text16": {
+					"type": "text",
+					"top": 149,
+					"left": 243,
+					"width": 119,
+					"height": 13,
+					"class": "SmallLabel",
+					"textAlign": "left",
+					"text": "<<>Company_FaxLabel_t>"
+				},
+				"Company_EmailButton_i": {
+					"type": "pictureButton",
+					"top": 172,
+					"left": 362,
+					"width": 20,
+					"height": 20,
+					"dataSource": "Company_EmailButton_i",
+					"columnCount": 3,
+					"picture": "/RESOURCES/Images/Gen_EmailButton.png",
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Company_EmailButton_i.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Company_WebButton_i": {
+					"type": "pictureButton",
+					"top": 203,
+					"left": 362,
+					"width": 20,
+					"height": 20,
+					"dataSource": "Company_WebButton_i",
+					"columnCount": 3,
+					"picture": "/RESOURCES/Images/Gen_WebButton.png",
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"method": "ObjectMethods/Company_WebButton_i.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Line1": {
+					"type": "line",
+					"top": 254,
+					"left": 74,
+					"width": 308,
+					"stroke": "#AAAAAA"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 241,
+					"left": 19,
+					"width": 276,
+					"height": 16,
+					"class": "LargeLabel",
+					"text": "<<>Company_InvoiceLabel_t>"
+				},
+				"Company_AddressLabel_t": {
+					"type": "input",
+					"top": 52,
+					"left": 20,
+					"width": 66,
+					"height": 16,
+					"dataSource": "<>Company_AddressLabel_t",
+					"class": "LargeLabel",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none"
+				},
+				"Company_NameLabel_t": {
+					"type": "input",
+					"top": 21,
+					"left": 20,
+					"width": 66,
+					"height": 16,
+					"dataSource": "<>Company_NameLabel_t",
+					"class": "LargeLabel",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none"
+				},
+				"Company_PhoneLabel_t": {
+					"type": "input",
+					"top": 130,
+					"left": 20,
+					"width": 66,
+					"height": 16,
+					"dataSource": "<>Company_PhoneLabel_t",
+					"class": "LargeLabel",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none"
+				},
+				"Company_EmailLabel_t": {
+					"type": "input",
+					"top": 174,
+					"left": 20,
+					"width": 66,
+					"height": 16,
+					"dataSource": "<>Company_EmailLabel_t",
+					"class": "LargeLabel",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none"
+				},
+				"Company_WebSiteLabel_t": {
+					"type": "input",
+					"top": 205,
+					"left": 20,
+					"width": 66,
+					"height": 16,
+					"dataSource": "<>Company_WebSiteLabel_t",
+					"class": "LargeLabel",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none"
+				},
+				"Company_TermsLabel_t": {
+					"type": "input",
+					"top": 272,
+					"left": 20,
+					"width": 91,
+					"height": 16,
+					"dataSource": "<>Company_TermsLabel_t",
+					"class": "LargeLabel",
+					"textAlign": "right",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

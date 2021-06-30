@@ -1,0 +1,202 @@
+{
+	"destination": "detailScreen",
+	"inheritedForm": "Fnd_Tlbr_Toolbar",
+	"windowMinWidth": 700,
+	"windowMaxWidth": 700,
+	"windowMinHeight": 300,
+	"width": 700,
+	"height": 300,
+	"markerHeader": 68,
+	"markerBody": 86,
+	"markerBreak": 86,
+	"markerFooter": 86,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onHeader",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onActivate",
+		"onDeactivate",
+		"onDoubleClick",
+		"onCloseBox",
+		"onUnload",
+		"onResize"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Fnd_IO_ColumnBackground": {
+					"type": "picture",
+					"top": 51,
+					"left": 0,
+					"width": 435,
+					"height": 17,
+					"sizingX": "grow",
+					"pictureFormat": "scaled",
+					"picture": "Images/Fnd_IO_ColumnBackground.png"
+				},
+				"Fnd_Tlbr_DataBackground": {
+					"type": "rectangle",
+					"top": 67,
+					"left": 0,
+					"width": 435,
+					"height": 233,
+					"sizingX": "grow",
+					"stroke": "#FFFFFF"
+				},
+				"S1_Field1": {
+					"type": "input",
+					"top": 70,
+					"left": 2,
+					"width": 49,
+					"height": 15,
+					"dataSource": "[Invoices:6]Invoice Number:3",
+					"dataSourceTypeHint": "integer",
+					"class": "ListItem",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Invoices_InvoiceNumberFormat"
+					}
+				},
+				"S1_Text1": {
+					"type": "text",
+					"top": 52,
+					"left": 3,
+					"width": 48,
+					"height": 13,
+					"class": "ColumnHeader",
+					"text": "<<>Invoices_NumberColumnLabel_t>"
+				},
+				"Picture1": {
+					"type": "picture",
+					"top": 52,
+					"left": 53,
+					"width": 1,
+					"height": 16,
+					"pictureFormat": "scaled"
+				},
+				"S1_Field2": {
+					"type": "input",
+					"top": 70,
+					"left": 56,
+					"width": 65,
+					"height": 15,
+					"dataSource": "[Invoices:6]Invoice Date:4",
+					"dataSourceTypeHint": "date",
+					"class": "ListItem",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none"
+				},
+				"S1_Text2": {
+					"type": "text",
+					"top": 52,
+					"left": 58,
+					"width": 63,
+					"height": 13,
+					"class": "ColumnHeader",
+					"text": "<<>Invoices_DateColumnLabel_t>"
+				},
+				"Picture2": {
+					"type": "picture",
+					"top": 52,
+					"left": 123,
+					"width": 1,
+					"height": 16,
+					"pictureFormat": "scaled"
+				},
+				"S1_Field3": {
+					"type": "input",
+					"top": 70,
+					"left": 126,
+					"width": 215,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "[Contacts:4]Last Name:3",
+					"class": "ListItem",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none"
+				},
+				"S1_Text3": {
+					"type": "text",
+					"top": 52,
+					"left": 128,
+					"width": 213,
+					"height": 13,
+					"sizingX": "grow",
+					"class": "ColumnHeader",
+					"text": "<<>Invoices_CustomerColumnLabel_t>"
+				},
+				"Picture3": {
+					"type": "picture",
+					"top": 52,
+					"left": 343,
+					"width": 1,
+					"height": 16,
+					"sizingX": "move",
+					"pictureFormat": "scaled"
+				},
+				"S1_Field4": {
+					"type": "input",
+					"top": 70,
+					"left": 346,
+					"width": 84,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "[Invoices:6]Total:8",
+					"dataSourceTypeHint": "number",
+					"class": "ListItem",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"numberFormat": {
+						"$ref": "/SOURCES/filters.json#/Invoices_MoneyFormat"
+					}
+				},
+				"S1_Text4": {
+					"type": "text",
+					"top": 52,
+					"left": 348,
+					"width": 82,
+					"height": 13,
+					"sizingX": "grow",
+					"class": "ColumnHeader",
+					"textAlign": "right",
+					"text": "<?8>"
+				}
+			},
+			"entryOrder": [
+				"S1_Field1",
+				"S1_Field2",
+				"S1_Field3",
+				"S1_Field4"
+			]
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

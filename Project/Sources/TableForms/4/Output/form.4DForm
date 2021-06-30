@@ -1,0 +1,131 @@
+{
+	"destination": "detailScreen",
+	"inheritedForm": "Fnd_Tlbr_Toolbar",
+	"windowMinWidth": 530,
+	"windowMinHeight": 300,
+	"width": 530,
+	"height": 300,
+	"markerHeader": 93,
+	"markerBody": 111,
+	"markerBreak": 111,
+	"markerFooter": 111,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onHeader",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onActivate",
+		"onDeactivate",
+		"onDoubleClick",
+		"onCloseBox",
+		"onUnload",
+		"onResize"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Fnd_IO_ColumnBackground": {
+					"type": "picture",
+					"top": 76,
+					"left": 0,
+					"width": 435,
+					"height": 17,
+					"sizingX": "grow",
+					"pictureFormat": "scaled",
+					"picture": "Images/Fnd_IO_ColumnBackground.png"
+				},
+				"Fnd_Tlbr_DataBackground": {
+					"type": "rectangle",
+					"top": 92,
+					"left": 0,
+					"width": 515,
+					"height": 208,
+					"sizingX": "grow",
+					"stroke": "#FFFFFF"
+				},
+				"Picture2": {
+					"type": "picture",
+					"top": 77,
+					"left": 193,
+					"width": 1,
+					"height": 16,
+					"sizingX": "move",
+					"pictureFormat": "scaled"
+				},
+				"S1_Field1": {
+					"type": "input",
+					"top": 95,
+					"left": 2,
+					"width": 189,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "[Contacts:4]Last Name:3",
+					"class": "ListItem",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none"
+				},
+				"S1_Text1": {
+					"type": "text",
+					"top": 77,
+					"left": 3,
+					"width": 188,
+					"height": 13,
+					"sizingX": "grow",
+					"class": "ColumnHeader",
+					"text": "<<>Contacts_NameColumnLabel_t>"
+				},
+				"S1_Field2": {
+					"type": "input",
+					"top": 95,
+					"left": 196,
+					"width": 317,
+					"height": 15,
+					"sizingX": "grow",
+					"dataSource": "[Contacts:4]Company:4",
+					"class": "ListItem",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none"
+				},
+				"S1_Text2": {
+					"type": "text",
+					"top": 77,
+					"left": 198,
+					"width": 315,
+					"height": 13,
+					"sizingX": "grow",
+					"class": "ColumnHeader",
+					"text": "<?4>"
+				}
+			},
+			"entryOrder": [
+				"S1_Field1",
+				"S1_Field2"
+			]
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}
