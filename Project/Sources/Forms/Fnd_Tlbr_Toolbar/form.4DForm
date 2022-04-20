@@ -1410,6 +1410,60 @@
 					"height": 76,
 					"pictureFormat": "scaled",
 					"picture": "/RESOURCES/Fnd_Tlbr_Images/Fnd_Tlbr_HideThisReplacement.png"
+				},
+				"Form": {
+					"type": "button",
+					"top": 2,
+					"left": -1,
+					"width": 12,
+					"height": 8,
+					"fontFamily": "System Font Regular",
+					"fontSize": 8,
+					"focusable": false,
+					"text": "F",
+					"iconFrames": 4,
+					"style": "custom",
+					"method": "ObjectMethods/Form.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"process": {
+					"type": "button",
+					"top": 11,
+					"left": -1,
+					"width": 12,
+					"height": 8,
+					"fontFamily": "System Font Regular",
+					"fontSize": 8,
+					"focusable": false,
+					"text": "P",
+					"iconFrames": 4,
+					"style": "custom",
+					"method": "ObjectMethods/process.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"storage": {
+					"type": "button",
+					"top": 20,
+					"left": -1,
+					"width": 12,
+					"height": 9,
+					"fontFamily": "System Font Regular",
+					"fontSize": 8,
+					"focusable": false,
+					"text": "S",
+					"iconFrames": 4,
+					"style": "custom",
+					"method": "ObjectMethods/storage.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
 				}
 			}
 		}
@@ -1531,5 +1585,10 @@
 			"View 8": {},
 			"View 9": {}
 		}
+	},
+	"geometryStamp": 2,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
 	}
 }

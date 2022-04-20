@@ -1,0 +1,97 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"Form": {
+					"type": "button",
+					"top": 2,
+					"left": -1,
+					"width": 12,
+					"height": 8,
+					"fontFamily": "System Font Regular",
+					"fontSize": 8,
+					"focusable": false,
+					"text": "F",
+					"iconFrames": 4,
+					"style": "custom",
+					"method": "ObjectMethods/Form.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"process": {
+					"type": "button",
+					"top": 11,
+					"left": -1,
+					"width": 12,
+					"height": 8,
+					"fontFamily": "System Font Regular",
+					"fontSize": 8,
+					"focusable": false,
+					"text": "P",
+					"iconFrames": 4,
+					"style": "custom",
+					"method": "ObjectMethods/process.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				},
+				"storage": {
+					"type": "button",
+					"top": 20,
+					"left": -1,
+					"width": 12,
+					"height": 9,
+					"fontFamily": "System Font Regular",
+					"fontSize": 8,
+					"focusable": false,
+					"text": "S",
+					"iconFrames": 4,
+					"style": "custom",
+					"method": "ObjectMethods/storage.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"geometryStamp": 1
+}

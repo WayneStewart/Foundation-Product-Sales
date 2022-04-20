@@ -1,4 +1,4 @@
-//%attributes = {"shared":true}
+//%attributes = {"invisible":true,"shared":true}
 // ----------------------------------------------------
 // Project Method: Fnd_Hook_Shell_Startup
 
@@ -17,7 +17,8 @@
 // ----------------------------------------------------
 
 C_TEXT:C284($testString_t;$decimal_t)
-C_LONGINT:C283($delayUntilTicks_i)
+
+var $i;$delayUntilTicks_i : Integer
 
 $testString_t:=String:C10(1.1)
 
@@ -46,6 +47,15 @@ Case of
 	Else 
 		<>Gen_MoneyFormat_t:="$"+<>Gen_MoneyFormat_t
 End case 
+
+
+
+Fnd_Shell_ExcludeFromQuit("AdminWorker")
+For ($i;0;4)
+	Fnd_Shell_ExcludeFromQuit("Spare Process "+String:C10($i))
+End for 
+
+
 
 // Create a localized colon string to use after field name labels & such.
 <>Gen_Colon_t:=Fnd_Loc_GetString("Loc_General";"Colon")
@@ -104,6 +114,8 @@ End case
 <>Products_DescriptionLabel_t:=Fnd_Loc_GetString("Loc_Products";"DescriptionLabel")
 <>Products_PriceLabel_t:=Fnd_Loc_GetString("Loc_Products";"PriceLabel")
 <>Products_SelectNumberLabel_t:=Fnd_Loc_GetString("Loc_Products";"SelectNumberLabel")
+
+
 
 
 If (Records in table:C83([Invoices:6])=0)

@@ -1,4 +1,4 @@
-//%attributes = {"invisible":true}
+//%attributes = {"invisible":true,"shared":true}
 C_LONGINT:C283(COMPANY_CANCELBUTTON_I)
 C_LONGINT:C283(Company_EmailButton_i)
 C_LONGINT:C283(COMPANY_OKBUTTON_I)

@@ -1,4 +1,4 @@
-//%attributes = {"invisible":true}
+//%attributes = {"invisible":true,"shared":true}
 ARRAY TEXT:C222(\
 COMPANY_TERMSPOPUP_AT;\
 0)\

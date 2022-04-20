@@ -1,4 +1,4 @@
-//%attributes = {"shared":true}
+//%attributes = {"invisible":true,"shared":true}
 // ----------------------------------------------------
 
 // Project Method: Contacts_FullAddress (with name; with country)

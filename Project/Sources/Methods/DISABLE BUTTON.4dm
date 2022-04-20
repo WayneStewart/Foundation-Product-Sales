@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"invisible":true,"shared":true}
 //%attributes = {}
 // ----------------------------------------------------
 // Project Method: DISABLE BUTTON (Button Name or Pointer)

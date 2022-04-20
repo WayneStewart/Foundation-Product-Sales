@@ -1,4 +1,4 @@
-//%attributes = {"shared":true}
+//%attributes = {"invisible":true,"shared":true}
 // ----------------------------------------------------
 // Project Method: Fnd_Hook_IO_DisplayTable
 
@@ -26,13 +26,18 @@
 
 //   EXAMPLE CODE:
 
+
+
+Fnd_Out_Active(False:C215)
+
 Case of 
 	: (Fnd_Gen_CurrentTable=(->[Invoices:6]))
 		Fnd_Tlbr_Style("Small2")
 		
 		Fnd_Tlbr_Button_Add("BttnName";"Preferences";"Fnd_Bttn_Settings";"Fnd_Pref_Display")
 		
-		
+	: (Fnd_Gen_CurrentTable=(->[Contacts:4]))
+		Fnd_Out_Active(True:C214)
 		
 	: (Fnd_Gen_CurrentTable=(->[Products:5]))
 		Fnd_IO_ToolbarIconGroup("Card")

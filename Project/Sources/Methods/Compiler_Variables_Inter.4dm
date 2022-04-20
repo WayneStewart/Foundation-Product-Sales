@@ -1,4 +1,4 @@
-//%attributes = {"invisible":true}
+//%attributes = {"invisible":true,"shared":true}
 C_TEXT:C284(<>Company_AddressLabel_t)
 C_TEXT:C284(<>Company_EmailLabel_t)
 C_TEXT:C284(<>Company_FaxLabel_t)

@@ -645,6 +645,18 @@
 					"borderStyle": "none",
 					"enterable": false,
 					"contextMenu": "none"
+				},
+				"Button": {
+					"type": "button",
+					"text": "Button",
+					"top": 13,
+					"left": 532,
+					"width": 71,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button.4dm"
 				}
 			}
 		}
@@ -664,7 +676,7 @@
 			"View 9": {}
 		}
 	},
-	"geometryStamp": 34,
+	"geometryStamp": 36,
 	"$4d": {
 		"version": "1",
 		"kind": "form"

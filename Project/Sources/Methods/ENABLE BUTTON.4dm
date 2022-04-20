@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"invisible":true,"shared":true}
 //%attributes = {}
 // ----------------------------------------------------
 // Project Method: ENABLE BUTTON (Button Name or Pointer)

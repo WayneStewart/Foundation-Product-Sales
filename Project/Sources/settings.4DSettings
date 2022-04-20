@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><preferences stamp="10">
+<?xml version="1.0" encoding="UTF-8"?><preferences stamp="11">
 	<com.4d>
 		<database>
 			<cache flush_buffer_delay="15" size_fixed="32" size_maximum="100" size_reserved="128"/>
 			<misc standard_xpath="false"/>
 		</database>
-		<general startup_environnement="1">
+		<general startup_environnement="0">
 			<mover always_display_dialog="2"/>
 		</general>
 		<interface>
@@ -42,7 +42,7 @@
 				<log>
 					<backup daily="" hourly="" monthly="" size="0" weekly=""/>
 				</log>
-				<configuration session_mode="3" automatic_session_management="true"/>
+				<configuration automatic_session_management="true" session_mode="3"/>
 				<webservices>
 					<server allow_requests="false"/>
 				</webservices>
@@ -53,7 +53,7 @@
 					<web_processes timeout_for_inactives="5"/>
 					<cache use_4d_web_cache="false"/>
 				</options>
-				<configuration session_mode="3" automatic_session_management="true"/>
+				<configuration automatic_session_management="true" session_mode="3"/>
 			</remote>
 		</web>
 		<deployment>

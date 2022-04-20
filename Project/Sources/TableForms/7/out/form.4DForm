@@ -1,0 +1,255 @@
+{
+	"destination": "detailScreen",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"markerHeader": 17,
+	"markerBody": 33,
+	"markerBreak": 33,
+	"markerFooter": 33,
+	"events": [
+		"onDisplayDetail"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Fnd_IO_ColumnBackground": {
+					"type": "picture",
+					"top": 0,
+					"left": 0,
+					"width": 541,
+					"height": 17,
+					"sizingX": "grow",
+					"pictureFormat": "scaled",
+					"picture": "Images/Fnd_IO_ColumnBackground.png"
+				},
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 17,
+					"left": 0,
+					"width": 541,
+					"height": 18,
+					"stroke": "#FFFFFF"
+				},
+				"Text7": {
+					"type": "text",
+					"top": 1,
+					"left": 1,
+					"width": 60,
+					"height": 17,
+					"class": "ColumnHeader",
+					"textAlign": "left",
+					"text": "ID"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 1,
+					"left": 456,
+					"width": 80,
+					"height": 17,
+					"class": "ColumnHeader",
+					"textAlign": "right",
+					"text": "<?7>"
+				},
+				"LineItemsQuantity": {
+					"type": "input",
+					"top": 18,
+					"left": 1,
+					"width": 60,
+					"height": 15,
+					"dataSource": "[LineItems:7]LineItem_ID:1",
+					"dataSourceTypeHint": "integer",
+					"class": "ListItem",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"method": "ObjectMethods/LineItemsQuantity.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"LineItemProductNumber": {
+					"type": "input",
+					"top": 18,
+					"left": 119,
+					"width": 84,
+					"height": 15,
+					"dataSource": "[LineItems:7]ProductNumber:8",
+					"class": "ListItem",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"entryFilter": {
+						"$ref": "/SOURCES/filters.json#/Demo_StringFilter"
+					},
+					"method": "ObjectMethods/LineItemProductNumber.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"LineItemSellPrice": {
+					"type": "input",
+					"top": 18,
+					"left": 366,
+					"width": 80,
+					"height": 15,
+					"dataSource": "[LineItems:7]SellPrice:6",
+					"dataSourceTypeHint": "number",
+					"class": "ListItem",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"method": "ObjectMethods/LineItemSellPrice.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Picture4": {
+					"type": "picture",
+					"top": 0,
+					"left": 451,
+					"width": 1,
+					"height": 16,
+					"pictureFormat": "scaled"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 1,
+					"left": 366,
+					"width": 80,
+					"height": 17,
+					"class": "ColumnHeader",
+					"textAlign": "right",
+					"text": "<?6>"
+				},
+				"Picture2": {
+					"type": "picture",
+					"top": 0,
+					"left": 361,
+					"width": 1,
+					"height": 16,
+					"pictureFormat": "scaled"
+				},
+				"Picture3": {
+					"type": "picture",
+					"top": 0,
+					"left": 114,
+					"width": 1,
+					"height": 16,
+					"pictureFormat": "scaled"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 1,
+					"left": 209,
+					"width": 148,
+					"height": 17,
+					"class": "ColumnHeader",
+					"text": "<?[5]3>"
+				},
+				"ProductName": {
+					"type": "input",
+					"top": 18,
+					"left": 209,
+					"width": 150,
+					"height": 15,
+					"dataSource": "[Products:5]ProductName:3",
+					"class": "ListItem",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onDisplayDetail"
+					]
+				},
+				"Picture5": {
+					"type": "picture",
+					"top": 0,
+					"left": 204,
+					"width": 1,
+					"height": 16,
+					"pictureFormat": "scaled"
+				},
+				"LineItemExtended": {
+					"type": "input",
+					"top": 18,
+					"left": 456,
+					"width": 80,
+					"height": 15,
+					"dataSource": "[LineItems:7]Extended:7",
+					"dataSourceTypeHint": "number",
+					"class": "ListItem",
+					"focusable": false,
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 1,
+					"left": 119,
+					"width": 81,
+					"height": 17,
+					"class": "ColumnHeader",
+					"text": "<<>Invoices_ProductNumberLabel_t>"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 1,
+					"left": 71,
+					"width": 40,
+					"height": 17,
+					"class": "ColumnHeader",
+					"textAlign": "right",
+					"text": "<<>Invoices_QuantityLabel_t>"
+				},
+				"LineItemsQuantity1": {
+					"type": "input",
+					"top": 18,
+					"left": 71,
+					"width": 40,
+					"height": 15,
+					"dataSource": "[LineItems:7]Quantity:4",
+					"dataSourceTypeHint": "integer",
+					"class": "ListItem",
+					"fill": "#FFFFFF",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"method": "ObjectMethods/LineItemsQuantity1.4dm",
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"geometryStamp": 36,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

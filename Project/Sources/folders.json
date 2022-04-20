@@ -58,7 +58,6 @@
 	},
 	"Forms": {
 		"forms": [
-			"[Company Info]Input",
 			"[Contacts]Input",
 			"[Contacts]Output",
 			"[Contacts]Report",
@@ -69,9 +68,6 @@
 			"[Invoices]Output",
 			"[Invoices]Report",
 			"[Invoices]SelectContact",
-			"[Line Items]Included",
-			"[Line Items]InvoiceIncluded",
-			"[Line Items]SelectProduct",
 			"[Products]Input",
 			"[Products]Output",
 			"[Products]Report"
@@ -91,34 +87,7 @@
 		]
 	},
 	"iLB_Forms": {},
-	"iLB_Project_Methods": {
-		"methods": [
-			"Compiler_iLB_Arrays",
-			"Compiler_iLB_Hook_Delete_Def",
-			"Compiler_iLB_Hook_Duplicate_Def",
-			"Compiler_iLB_Host_ChoiceListsTo",
-			"Compiler_iLB_Host_ListToArray",
-			"Compiler_iLB_Host_QuickReport",
-			"Compiler_iLB_Methods",
-			"Compiler_iLB_Variables",
-			"iLB_Hook_BrowserMenu",
-			"iLB_Hook_ChoiceListToArray",
-			"iLB_Hook_Default_Def",
-			"iLB_Hook_Delete_Def",
-			"iLB_Hook_Duplicate_Def",
-			"iLB_Hook_Load_Def",
-			"iLB_Hook_Load_ViewArrays",
-			"iLB_Hook_ObjectMethod",
-			"iLB_Hook_OutputFormMethod",
-			"iLB_Hook_Save_Def",
-			"iLB_Hook_Sort",
-			"iLB_Hook_Startup",
-			"iLB_Hook_TableBrowser2",
-			"iLB_Host_ChoiceListsToArray",
-			"iLB_Host_ListToArray",
-			"iLB_Host_QuickReport"
-		]
-	},
+	"iLB_Project_Methods": {},
 	"Product Sales": {
 		"groups": [
 			"Forms",
@@ -155,10 +124,8 @@
 	},
 	"Tables": {
 		"tables": [
-			"Company Info",
 			"Contacts",
 			"Invoices",
-			"Line Items",
 			"Products"
 		]
 	},
