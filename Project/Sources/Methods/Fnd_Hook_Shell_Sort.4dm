@@ -11,6 +11,11 @@
 
 // Returns: Nothing
 // ----------------------------------------------------
+C_OBJECT:C1216($es)
+C_BOOLEAN:C305($usingFndOut_b)
+
+
+
 
 If (Macintosh option down:C545)  // Also works for the Windows' Alt key.
 	Fnd_Menu_SortOrderEditor  // Display 4D's Order By Editor.
@@ -23,6 +28,17 @@ Else
 	//         Fnd_Sort_AddField (->[Companies]Company Name)
 	// End case 
 	
-	Fnd_Sort_Display  // Display Foundation's Sort dialog.
+	$usingFndOut_b:=Fnd_Gen_ComponentInfo("Fnd_Out";"state")="active"
+	If ($usingFndOut_b)
+		Fnd_Out_SyncronizeSelection
+		Fnd_Sort_Display  // Display Foundation's Sort dialog.
+		Form:C1466.listData:=Create entity selection:C1512(Fnd_Gen_CurrentTable->).copy()
+		Fnd_Out_Update
+	Else 
+		Fnd_Sort_Display  // Display Foundation's Sort dialog.
+	End if 
+	
 End if 
+
+
 

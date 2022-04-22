@@ -58,7 +58,7 @@
 					"left": 2,
 					"width": 49,
 					"height": 15,
-					"dataSource": "[Invoices:6]Invoice Number:3",
+					"dataSource": "[Invoices:6]InvoiceNumber:3",
 					"dataSourceTypeHint": "integer",
 					"class": "ListItem",
 					"fill": "transparent",
@@ -91,7 +91,7 @@
 					"left": 56,
 					"width": 65,
 					"height": 15,
-					"dataSource": "[Invoices:6]Invoice Date:4",
+					"dataSource": "[Invoices:6]InvoiceDate:4",
 					"dataSourceTypeHint": "date",
 					"class": "ListItem",
 					"fill": "transparent",
@@ -122,7 +122,7 @@
 					"width": 215,
 					"height": 15,
 					"sizingX": "grow",
-					"dataSource": "[Contacts:4]Last Name:3",
+					"dataSource": "[Contacts:4]LastName:3",
 					"class": "ListItem",
 					"fill": "transparent",
 					"borderStyle": "none",
@@ -198,5 +198,10 @@
 			"View 8": {},
 			"View 9": {}
 		}
+	},
+	"geometryStamp": 1,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
 	}
 }

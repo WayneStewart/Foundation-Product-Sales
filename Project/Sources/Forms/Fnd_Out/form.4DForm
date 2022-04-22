@@ -18,6 +18,7 @@
 		"onActivate",
 		"onDeactivate",
 		"onCloseBox",
+		"onUnload",
 		"onTimer",
 		"onResize"
 	],
@@ -36,9 +37,10 @@
 					"height": 375,
 					"events": [
 						"onClick",
-						"onHeaderClick",
+						"onDoubleClick",
 						"onDataChange",
-						"onSelectionChange"
+						"onSelectionChange",
+						"onHeaderClick"
 					],
 					"listboxType": "collection",
 					"right": 469,
@@ -50,13 +52,17 @@
 					"horizontalLineStroke": "transparent",
 					"verticalLineStroke": "transparent",
 					"alternateFill": "#F1F6FE",
+					"currentItemSource": "Form:C1466.currentItem",
+					"currentItemPositionSource": "Form:C1466.currentItemPosition",
+					"selectedItemsSource": "Form:C1466.selectedItems",
+					"visibility": "hidden",
 					"columns": []
 				}
 			}
 		}
 	],
 	"inheritedForm": "Fnd_Tlbr_Toolbar",
-	"geometryStamp": 15,
+	"geometryStamp": 16,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

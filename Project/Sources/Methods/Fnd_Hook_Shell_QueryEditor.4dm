@@ -9,14 +9,8 @@ Case of
 	: (Macintosh option down:C545)  // Also works for the Windows' Alt key.
 		Fnd_Find_Display
 		
-	: (Fnd_Gen_CurrentTable=(->[Contacts:4]))
-		// do something special for the [Contacts] table
+		//: (Fnd_Gen_CurrentTable=(->[Contacts]))
 		
-		// check for alternative query routines
-		//: (Fnd_Gen_ComponentInfo ("QP";"state")="active")  ` ME050930 - Check to see if ASG's QueryPack component is available.
-		//EXECUTE METHOD("QP_Query";*;Fnd_Gen_CurrentTable )
-		//Else 
-		//Fnd_Find_Display
 	Else 
 		QUERY:C277((Fnd_Gen_CurrentTable)->)  // DO NOT CALL Fnd_Menu_QueryEditor here, will cause an infinite loop
 		

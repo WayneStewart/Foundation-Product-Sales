@@ -33,6 +33,11 @@ Fnd_Out_Active(False:C215)
 Case of 
 	: (Fnd_Gen_CurrentTable=(->[Invoices:6]))
 		Fnd_Tlbr_Style("Small2")
+		Fnd_Out_Active(True:C214)
+		Fnd_Out_AddField("InvoiceNumber")
+		Fnd_Out_AddField("InvoiceDate")
+		Fnd_Out_AddField("contact.LastName")
+		Fnd_Out_AddField("Total";0;"";0;<>Gen_MoneyFormat_t)
 		
 		Fnd_Tlbr_Button_Add("BttnName";"Preferences";"Fnd_Bttn_Settings";"Fnd_Pref_Display")
 		
@@ -40,6 +45,7 @@ Case of
 		Fnd_Out_Active(True:C214)
 		
 	: (Fnd_Gen_CurrentTable=(->[Products:5]))
+		Fnd_Out_Active(True:C214)
 		Fnd_IO_ToolbarIconGroup("Card")
 		Fnd_IO_MultiWindow(False:C215)  // Display the input form in the same window as the output form.
 		Fnd_IO_AddMultipleRecords(True:C214)  // Add new records until Cancel is clicked.
