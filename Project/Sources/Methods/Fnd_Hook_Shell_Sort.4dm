@@ -30,7 +30,7 @@ Else
 	
 	$usingFndOut_b:=Fnd_Gen_ComponentInfo("Fnd_Out";"state")="active"
 	If ($usingFndOut_b)
-		Fnd_Out_SyncronizeSelection
+		Fnd_Out_SynchroniseSelection
 		Fnd_Sort_Display  // Display Foundation's Sort dialog.
 		Form:C1466.listData:=Create entity selection:C1512(Fnd_Gen_CurrentTable->).copy()
 		Fnd_Out_Update

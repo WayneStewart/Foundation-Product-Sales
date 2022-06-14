@@ -26,8 +26,6 @@
 
 //   EXAMPLE CODE:
 
-
-
 Fnd_Out_Active(False:C215)
 
 Case of 
