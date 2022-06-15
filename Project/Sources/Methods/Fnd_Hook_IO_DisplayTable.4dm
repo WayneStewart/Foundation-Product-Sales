@@ -40,6 +40,14 @@ Case of
 		Fnd_Tlbr_Button_Add("BttnName";"Preferences";"Fnd_Bttn_Settings";"Fnd_Pref_Display")
 		
 	: (Fnd_Gen_CurrentTable=(->[Contacts:4]))
+		Fnd_Out_AddField(New object:C1471(\
+			fo_field;"Formula: contactName";\
+			fo_type;Is text:K8:3;\
+			fo_title;"Contact"))
+		Fnd_Out_AddField(New object:C1471(\
+			fo_field;"Formula: "+"This.LastName+\", \"+This.FirstName";\
+			fo_type;Is text:K8:3;\
+			fo_title;"Contact Reversed"))
 		Fnd_Out_Active(True:C214)
 		
 	: (Fnd_Gen_CurrentTable=(->[Products:5]))
