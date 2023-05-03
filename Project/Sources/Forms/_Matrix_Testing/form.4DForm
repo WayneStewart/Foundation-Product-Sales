@@ -96,5 +96,6 @@
 		"views": {
 			"View 1": {}
 		}
-	}
+	},
+	"menuBar": "Fnd_Shell"
 }

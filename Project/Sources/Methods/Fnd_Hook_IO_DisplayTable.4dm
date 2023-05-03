@@ -26,6 +26,10 @@
 
 //   EXAMPLE CODE:
 
+$out:=cs:C1710.foundation.Fnd_Out.new()
+
+$out.isActive(True:C214)
+
 Fnd_Out_Active(True:C214)
 
 Case of 
@@ -51,7 +55,6 @@ Case of
 		Fnd_Out_Active(True:C214)
 		
 	: (Fnd_Gen_CurrentTable=(->[Products:5]))
-		Fnd_Out_Active(True:C214)
 		Fnd_IO_ToolbarIconGroup("Card")
 		Fnd_IO_MultiWindow(False:C215)  // Display the input form in the same window as the output form.
 		Fnd_IO_AddMultipleRecords(True:C214)  // Add new records until Cancel is clicked.
