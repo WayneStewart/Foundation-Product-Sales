@@ -16,9 +16,9 @@
 //   Added some code to handle money formats.
 // ----------------------------------------------------
 
-C_TEXT:C284($testString_t;$decimal_t)
+C_TEXT:C284($testString_t; $decimal_t)
 
-var $i;$delayUntilTicks_i : Integer
+var $i; $delayUntilTicks_i : Integer
 
 $testString_t:=String:C10(1.1)
 
@@ -51,92 +51,96 @@ End case
 
 
 Fnd_Shell_ExcludeFromQuit("AdminWorker")
-For ($i;0;4)
+For ($i; 0; 4)
 	Fnd_Shell_ExcludeFromQuit("Spare Process "+String:C10($i))
 End for 
 
 
 
 // Create a localized colon string to use after field name labels & such.
-<>Gen_Colon_t:=Fnd_Loc_GetString("Loc_General";"Colon")
+<>Gen_Colon_t:=Fnd_Loc_GetString("Loc_General"; "Colon")
 
 // Load some other localization strings.
-<>Company_NameLabel_t:=Fnd_Loc_GetString("Loc_Company";"NameLabel")
-<>Company_AddressLabel_t:=Fnd_Loc_GetString("Loc_Company";"AddressLabel")
-<>Company_PhoneLabel_t:=Fnd_Loc_GetString("Loc_Company";"PhoneLabel")
-<>Company_VoiceLabel_t:=Fnd_Loc_GetString("Loc_Company";"VoiceLabel")
-<>Company_FaxLabel_t:=Fnd_Loc_GetString("Loc_Company";"FaxLabel")
-<>Company_EmailLabel_t:=Fnd_Loc_GetString("Loc_Company";"EmailLabel")
-<>Company_WebSiteLabel_t:=Fnd_Loc_GetString("Loc_Company";"WebSiteLabel")
-<>Company_InvoiceLabel_t:=Fnd_Loc_GetString("Loc_Company";"InvoicesLabel")
-<>Company_TermsLabel_t:=Fnd_Loc_GetString("Loc_Company";"DefaultTermsLabel")
+<>Company_NameLabel_t:=Fnd_Loc_GetString("Loc_Company"; "NameLabel")
+<>Company_AddressLabel_t:=Fnd_Loc_GetString("Loc_Company"; "AddressLabel")
+<>Company_PhoneLabel_t:=Fnd_Loc_GetString("Loc_Company"; "PhoneLabel")
+<>Company_VoiceLabel_t:=Fnd_Loc_GetString("Loc_Company"; "VoiceLabel")
+<>Company_FaxLabel_t:=Fnd_Loc_GetString("Loc_Company"; "FaxLabel")
+<>Company_EmailLabel_t:=Fnd_Loc_GetString("Loc_Company"; "EmailLabel")
+<>Company_WebSiteLabel_t:=Fnd_Loc_GetString("Loc_Company"; "WebSiteLabel")
+<>Company_InvoiceLabel_t:=Fnd_Loc_GetString("Loc_Company"; "InvoicesLabel")
+<>Company_TermsLabel_t:=Fnd_Loc_GetString("Loc_Company"; "DefaultTermsLabel")
 
-<>Contacts_NameColumnLabel_t:=Fnd_Loc_GetString("Loc_Contacts";"NameColumnLabel")
-<>Contacts_NameLabel_t:=Fnd_Loc_GetString("Loc_Contacts";"NameLabel")
-<>Contacts_FirstNameLabel_t:=Fnd_Loc_GetString("Loc_Contacts";"FirstNameLabel")
-<>Contacts_LastNameLabel_t:=Fnd_Loc_GetString("Loc_Contacts";"LastNameLabel")
-<>Contacts_CompanyLabel_t:=Fnd_Loc_GetString("Loc_Contacts";"CompanyLabel")
-<>Contacts_AddressLabel_t:=Fnd_Loc_GetString("Loc_Contacts";"AddressLabel")
-<>Contacts_CountryLabel_t:=Fnd_Loc_GetString("Loc_Contacts";"CountryLabel")
-<>Contacts_PhoneLabel_t:=Fnd_Loc_GetString("Loc_Contacts";"PhoneLabel")
-<>Contacts_VoiceLabel_t:=Fnd_Loc_GetString("Loc_Contacts";"VoiceLabel")
-<>Contacts_FaxLabel_t:=Fnd_Loc_GetString("Loc_Contacts";"FaxLabel")
-<>Contacts_EmailLabel_t:=Fnd_Loc_GetString("Loc_Contacts";"EmailLabel")
-<>Contacts_WebSiteLabel_t:=Fnd_Loc_GetString("Loc_Contacts";"WebSiteLabel")
+<>Contacts_NameColumnLabel_t:=Fnd_Loc_GetString("Loc_Contacts"; "NameColumnLabel")
+<>Contacts_NameLabel_t:=Fnd_Loc_GetString("Loc_Contacts"; "NameLabel")
+<>Contacts_FirstNameLabel_t:=Fnd_Loc_GetString("Loc_Contacts"; "FirstNameLabel")
+<>Contacts_LastNameLabel_t:=Fnd_Loc_GetString("Loc_Contacts"; "LastNameLabel")
+<>Contacts_CompanyLabel_t:=Fnd_Loc_GetString("Loc_Contacts"; "CompanyLabel")
+<>Contacts_AddressLabel_t:=Fnd_Loc_GetString("Loc_Contacts"; "AddressLabel")
+<>Contacts_CountryLabel_t:=Fnd_Loc_GetString("Loc_Contacts"; "CountryLabel")
+<>Contacts_PhoneLabel_t:=Fnd_Loc_GetString("Loc_Contacts"; "PhoneLabel")
+<>Contacts_VoiceLabel_t:=Fnd_Loc_GetString("Loc_Contacts"; "VoiceLabel")
+<>Contacts_FaxLabel_t:=Fnd_Loc_GetString("Loc_Contacts"; "FaxLabel")
+<>Contacts_EmailLabel_t:=Fnd_Loc_GetString("Loc_Contacts"; "EmailLabel")
+<>Contacts_WebSiteLabel_t:=Fnd_Loc_GetString("Loc_Contacts"; "WebSiteLabel")
 
-<>Invoices_NumberColumnLabel_t:=Fnd_Loc_GetString("Loc_Invoices";"NumberColumnLabel")
-<>Invoices_DescriptionLabel_t:=Fnd_Loc_GetString("Loc_Invoices";"DescriptionLabel")
-<>Invoices_DateColumnLabel_t:=Fnd_Loc_GetString("Loc_Invoices";"DateColumnLabel")
-<>Invoices_CustomerColumnLabel_t:=Fnd_Loc_GetString("Loc_Invoices";"CustomerColumnLabel")
+<>Invoices_NumberColumnLabel_t:=Fnd_Loc_GetString("Loc_Invoices"; "NumberColumnLabel")
+<>Invoices_DescriptionLabel_t:=Fnd_Loc_GetString("Loc_Invoices"; "DescriptionLabel")
+<>Invoices_DateColumnLabel_t:=Fnd_Loc_GetString("Loc_Invoices"; "DateColumnLabel")
+<>Invoices_CustomerColumnLabel_t:=Fnd_Loc_GetString("Loc_Invoices"; "CustomerColumnLabel")
 
-<>Invoices_NumberLabel_t:=Fnd_Loc_GetString("Loc_Invoices";"NumberLabel")
-<>Invoices_DateLabel_t:=Fnd_Loc_GetString("Loc_Invoices";"DateLabel")
-<>Invoices_ContactLabel_t:=Fnd_Loc_GetString("Loc_Invoices";"ContactLabel")
-<>Invoices_TermsLabel_t:=Fnd_Loc_GetString("Loc_Invoices";"TermsLabel")
-<>Invoices_QuantityLabel_t:=Fnd_Loc_GetString("Loc_Invoices";"QuantityLabel")
-<>Invoices_ProductNumberLabel_t:=Fnd_Loc_GetString("Loc_Invoices";"ProductNumberLabel")
-<>Invoices_ListPriceLabel_t:=Fnd_Loc_GetString("Loc_Invoices";"ListPriceLabel")
-<>Invoices_ExtendedPriceLabel_t:=Fnd_Loc_GetString("Loc_Invoices";"ExtendedPriceLabel")
-<>Invoices_SellPriceLabel_t:=Fnd_Loc_GetString("Loc_Invoices";"SellPriceLabel")
-<>Invoices_PrintTitle_t:=Fnd_Loc_GetString("Loc_Invoices";"PrintTitle")
-<>Invoices_PrintBillTo_t:=Fnd_Loc_GetString("Loc_Invoices";"PrintBillTo")
-<>Invoices_PrintDate_t:=Fnd_Loc_GetString("Loc_Invoices";"PrintDate")
-<>Invoices_PrintInvoiceNo_t:=Fnd_Loc_GetString("Loc_Invoices";"PrintInvoiceNo")
-<>Invoices_PrintTerms_t:=Fnd_Loc_GetString("Loc_Invoices";"PrintTerms")
-<>Invoices_SubtotalLabel_t:=Fnd_Loc_GetString("Loc_Invoices";"SubtotalLabel")
-<>Invoices_TaxLabel_t:=Fnd_Loc_GetString("Loc_Invoices";"TaxLabel")
-<>Invoices_ShippingLabel_t:=Fnd_Loc_GetString("Loc_Invoices";"ShippingLabel")
-<>Invoices_TotalLabel_t:=Fnd_Loc_GetString("Loc_Invoices";"TotalLabel")
+<>Invoices_NumberLabel_t:=Fnd_Loc_GetString("Loc_Invoices"; "NumberLabel")
+<>Invoices_DateLabel_t:=Fnd_Loc_GetString("Loc_Invoices"; "DateLabel")
+<>Invoices_ContactLabel_t:=Fnd_Loc_GetString("Loc_Invoices"; "ContactLabel")
+<>Invoices_TermsLabel_t:=Fnd_Loc_GetString("Loc_Invoices"; "TermsLabel")
+<>Invoices_QuantityLabel_t:=Fnd_Loc_GetString("Loc_Invoices"; "QuantityLabel")
+<>Invoices_ProductNumberLabel_t:=Fnd_Loc_GetString("Loc_Invoices"; "ProductNumberLabel")
+<>Invoices_ListPriceLabel_t:=Fnd_Loc_GetString("Loc_Invoices"; "ListPriceLabel")
+<>Invoices_ExtendedPriceLabel_t:=Fnd_Loc_GetString("Loc_Invoices"; "ExtendedPriceLabel")
+<>Invoices_SellPriceLabel_t:=Fnd_Loc_GetString("Loc_Invoices"; "SellPriceLabel")
+<>Invoices_PrintTitle_t:=Fnd_Loc_GetString("Loc_Invoices"; "PrintTitle")
+<>Invoices_PrintBillTo_t:=Fnd_Loc_GetString("Loc_Invoices"; "PrintBillTo")
+<>Invoices_PrintDate_t:=Fnd_Loc_GetString("Loc_Invoices"; "PrintDate")
+<>Invoices_PrintInvoiceNo_t:=Fnd_Loc_GetString("Loc_Invoices"; "PrintInvoiceNo")
+<>Invoices_PrintTerms_t:=Fnd_Loc_GetString("Loc_Invoices"; "PrintTerms")
+<>Invoices_SubtotalLabel_t:=Fnd_Loc_GetString("Loc_Invoices"; "SubtotalLabel")
+<>Invoices_TaxLabel_t:=Fnd_Loc_GetString("Loc_Invoices"; "TaxLabel")
+<>Invoices_ShippingLabel_t:=Fnd_Loc_GetString("Loc_Invoices"; "ShippingLabel")
+<>Invoices_TotalLabel_t:=Fnd_Loc_GetString("Loc_Invoices"; "TotalLabel")
 
-<>Products_NumberColumnLabel_t:=Fnd_Loc_GetString("Loc_Products";"NumberColumnLabel")
-<>Products_NumberLabel_t:=Fnd_Loc_GetString("Loc_Products";"NumberLabel")
-<>Products_NameLabel_t:=Fnd_Loc_GetString("Loc_Products";"NameLabel")
-<>Products_DescriptionLabel_t:=Fnd_Loc_GetString("Loc_Products";"DescriptionLabel")
-<>Products_PriceLabel_t:=Fnd_Loc_GetString("Loc_Products";"PriceLabel")
-<>Products_SelectNumberLabel_t:=Fnd_Loc_GetString("Loc_Products";"SelectNumberLabel")
+<>Products_NumberColumnLabel_t:=Fnd_Loc_GetString("Loc_Products"; "NumberColumnLabel")
+<>Products_NumberLabel_t:=Fnd_Loc_GetString("Loc_Products"; "NumberLabel")
+<>Products_NameLabel_t:=Fnd_Loc_GetString("Loc_Products"; "NameLabel")
+<>Products_DescriptionLabel_t:=Fnd_Loc_GetString("Loc_Products"; "DescriptionLabel")
+<>Products_PriceLabel_t:=Fnd_Loc_GetString("Loc_Products"; "PriceLabel")
+<>Products_SelectNumberLabel_t:=Fnd_Loc_GetString("Loc_Products"; "SelectNumberLabel")
 
+_Matrix_Testing()
 
+/*
 
-
-If (Records in table:C83([Invoices:6])=0)
-	Fnd_SqNo_Set("Invoice Number";1001)  // Start invoices at this number. Don't localize this.
+If (Records in table([Invoices])=0)
+Fnd_SqNo_Set("Invoice Number"; 1001)  // Start invoices at this number. Don't localize this.
 End if 
 
-If (Fnd_Pref_GetBoolean("Display Contacts at Startup";True:C214))
-	Fnd_IO_DisplayTable(->[Contacts:4])  // Display the Contacts table window.
+If (Fnd_Pref_GetBoolean("Display Contacts at Startup"; True))
+Fnd_IO_DisplayTable(->[Contacts])  // Display the Contacts table window.
 End if 
 
-If (Fnd_Pref_GetBoolean("Display Invoices at Startup";True:C214))
-	Fnd_IO_DisplayTable(->[Invoices:6])  // Just for this demo.
+If (Fnd_Pref_GetBoolean("Display Invoices at Startup"; True))
+Fnd_IO_DisplayTable(->[Invoices])  // Just for this demo.
 End if 
 
 //If there's no [Company Info] record, display the edit window so the user
 //   can create a record.
-If (Records in table:C83([Company Info:8])=0)
-	// Delay for one second first, so this window will open up in front of the Contacts window.
-	$delayUntilTicks_i:=Tickcount:C458+60  // 60 ticks = 1 second
-	Repeat 
-		IDLE:C311  // Can't use DELAY PROCESS since we're probably be in the User/Custom Menus process.
-	Until (Tickcount:C458>$delayUntilTicks_i)
-	Company_EditSettings
+If (Records in table([CompanyInfo])=0)
+// Delay for one second first, so this window will open up in front of the Contacts window.
+$delayUntilTicks_i:=Tickcount+60  // 60 ticks = 1 second
+Repeat 
+IDLE  // Can't use DELAY PROCESS since we're probably be in the User/Custom Menus process.
+Until (Tickcount>$delayUntilTicks_i)
+Company_EditSettings
 End if 
+
+*/
+
