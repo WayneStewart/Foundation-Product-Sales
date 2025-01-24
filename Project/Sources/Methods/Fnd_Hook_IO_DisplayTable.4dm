@@ -25,6 +25,7 @@
 //   Fnd_Tlbr_Button_Add ("BttnName";"Preferences";"Fnd_Bttn_Settings";"Fnd_Pref_Display")
 
 //   EXAMPLE CODE:
+var $out : Object
 
 $out:=cs:C1710.foundation.Fnd_Out.new()
 
