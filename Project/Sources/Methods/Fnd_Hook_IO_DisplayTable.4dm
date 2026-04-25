@@ -55,5 +55,11 @@ Case of
 		Fnd_IO_ToolbarIconGroup("Card")
 		Fnd_IO_MultiWindow(False:C215)  // Display the input form in the same window as the output form.
 		Fnd_IO_AddMultipleRecords(True:C214)  // Add new records until Cancel is clicked.
+		
+		Fnd_Out_AddField("ProductNumber"; 0; "Prod. No")
+		Fnd_Out_AddField("ProductName"; 0; "Product Name")
+		Fnd_Out_AddField("Description"; 0; "Description")
+		Fnd_Out_AddField("ListPrice"; 0; ""; Align default:K42:1; <>Gen_MoneyFormat_t)
+		
 End case 
 
