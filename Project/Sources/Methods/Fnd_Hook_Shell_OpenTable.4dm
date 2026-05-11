@@ -12,7 +12,7 @@
 // Returns: Nothing
 // ----------------------------------------------------
 
-Fnd_Shell_OpenTableAdd(->[Contacts:4])  // We can add them one at a time...
-Fnd_Shell_OpenTableAdd(->[Invoices:6];->[Products:5])  //  ...or all at once.
+//Fnd_Shell_OpenTableAdd(->[Contacts])  // We can add them one at a time...
+//Fnd_Shell_OpenTableAdd(->[Invoices]; ->[Products])  //  ...or all at once.
 
 Fnd_Shell_OpenTableDialog

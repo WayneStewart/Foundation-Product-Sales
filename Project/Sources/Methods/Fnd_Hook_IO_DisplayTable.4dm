@@ -24,6 +24,10 @@
 //   Fnd_Tlbr_Divider_Add 
 //   Fnd_Tlbr_Button_Add ("BttnName";"Preferences";"Fnd_Bttn_Settings";"Fnd_Pref_Display")
 
+Fnd_Tlbr_Button_Add("prefButton"; "Preferences"; "Fnd_Bttn_Settings"; "Fnd_Pref_Display(\"Preferences\")")
+
+Fnd_Tlbr_Button_Add("viewButton"; "View"; "Fnd_Bttn_Settings"; "___Dummy")
+
 //   EXAMPLE CODE:
 
 Fnd_Out_Active(True:C214)
@@ -37,7 +41,6 @@ Case of
 		Fnd_Out_AddField("contact.reversedFullName()"; 0; "Contact")
 		Fnd_Out_AddField("Total"; 0; ""; 0; <>Gen_MoneyFormat_t)
 		
-		Fnd_Tlbr_Button_Add("BttnName"; "Preferences"; "Fnd_Bttn_Settings"; "Fnd_Pref_Display")
 		
 	: (Fnd_Gen_CurrentTable=(->[Contacts:4]))
 		Fnd_Out_AddField(New object:C1471(\
@@ -47,8 +50,11 @@ Case of
 		Fnd_Out_AddField(New object:C1471(\
 			fo_field; "Formula: this.reversedFullName()"; \
 			fo_type; Is text:K8:3; \
+			fo_style; Italic:K14:3; \
 			fo_title; "Contact Reversed"))
 		Fnd_Out_Active(True:C214)
+		
+		//Fnd_Out_ConfigureList("Times New Roman"; 36; 72)
 		
 	: (Fnd_Gen_CurrentTable=(->[Products:5]))
 		Fnd_Out_Active(True:C214)
@@ -59,7 +65,19 @@ Case of
 		Fnd_Out_AddField("ProductNumber"; 0; "Prod. No")
 		Fnd_Out_AddField("ProductName"; 0; "Product Name")
 		Fnd_Out_AddField("Description"; 0; "Description")
-		Fnd_Out_AddField("ListPrice"; 0; ""; Align default:K42:1; <>Gen_MoneyFormat_t)
+		//Fnd_Out_AddField("ListPrice"; 0; ""; Align default; <>Gen_MoneyFormat_t)
+		
+		Fnd_Out_AddField(New object:C1471(\
+			fo_field; "ListPrice"; \
+			fo_type; Is real:K8:4; \
+			fo_style; Italic:K14:3+Underline:K14:4; \
+			fo_title; "List Price"))
+		
+		
+		//: (Fnd_Gen_CurrentTable=(->[LineItems]))
+		//Fnd_Out_AddField("invoice.contact.reversedFullName()"; 0; "Contact")
+		//Fnd_Out_AddField("product.ProductNumber"; 0; "Prod. No")
+		
 		
 End case 
 

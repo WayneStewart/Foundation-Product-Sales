@@ -56,6 +56,8 @@
 					"currentItemPositionSource": "Form:C1466.currentItemPosition",
 					"selectedItemsSource": "Form:C1466.selectedItems",
 					"visibility": "hidden",
+					"rowStrokeSource": "",
+					"metaSource": "",
 					"columns": []
 				}
 			}
