@@ -46,7 +46,10 @@
 			"Fnd_Host_SaveList",
 			"Fnd_Host_Tlbr_ButtonClck",
 			"Fnd_Host_Tlbr_SetBtnPict",
-			"Fnd_Host_Tlbr_SetMessage"
+			"Fnd_Host_Tlbr_SetMessage",
+			"Fnd_Test_Assert",
+			"Fnd_Test_Begin",
+			"Fnd_Test_End"
 		]
 	},
 	"Fnd_Tables": {
