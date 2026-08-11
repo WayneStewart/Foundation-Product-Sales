@@ -51,6 +51,7 @@
 			"Fnd_Test_Begin",
 			"Fnd_Test_End",
 			"Fnd_Test_LineWith",
+			"Fnd_Test_Stamp",
 			"Fnd_Test_Variadics"
 		]
 	},

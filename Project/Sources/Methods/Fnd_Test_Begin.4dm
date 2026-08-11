@@ -41,7 +41,7 @@ $stamp_o:=New object:C1471(\
 "v4D"; Application version:C493; \
 "hostCompiled"; Is compiled mode:C492; \
 "componentCompiled"; $foundationCompiled_b; \
-"startedAt"; String:C10(Current date:C33; ISO date:K1:8)+"T"+String:C10(Current time:C178))
+"startedAt"; Fnd_Test_Stamp)
 
 Use (Storage:C1525)
 	Storage:C1525.fpsTest:=New shared object:C1526(\

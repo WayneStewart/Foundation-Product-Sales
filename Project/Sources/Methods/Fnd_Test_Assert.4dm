@@ -27,12 +27,23 @@
 
 var $callChain_c : Collection
 var $caller_t : Text
+var $frame_o : Object
 
-// Element 0 is this method, so element 1 is the test that called it.
-//   Get call chain was renamed between versions, so it is reached through
+// Get call chain was renamed between versions, so it is reached through
 //   Foundation's wrapper, which is Shared and therefore visible here.
+// The wrapper runs inside the component, so the chain begins with its own
+//   frames: element 0 is Fnd_Shell_CommandWrapper and element 1 is this method.
+//   Take the first frame that is neither, which is the test that called us.
 $callChain_c:=Fnd_Shell_CommandWrapper("Get call chain")
-$caller_t:=($callChain_c.length>=2) ? $callChain_c[1].name : ""
+$caller_t:=""
+
+For each ($frame_o; $callChain_c) Until ($caller_t#"")
+
+	If (($frame_o.name#"Fnd_Test_Assert") && ($frame_o.name#"Fnd_Shell_CommandWrapper"))
+		$caller_t:=$frame_o.name
+	End if
+
+End for each
 
 If (Storage:C1525.fpsTest=Null:C1517)
 	// A test that forgot to open a run still has somewhere to be recorded.
