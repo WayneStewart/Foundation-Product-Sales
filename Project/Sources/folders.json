@@ -49,7 +49,9 @@
 			"Fnd_Host_Tlbr_SetMessage",
 			"Fnd_Test_Assert",
 			"Fnd_Test_Begin",
-			"Fnd_Test_End"
+			"Fnd_Test_End",
+			"Fnd_Test_LineWith",
+			"Fnd_Test_Variadics"
 		]
 	},
 	"Fnd_Tables": {
