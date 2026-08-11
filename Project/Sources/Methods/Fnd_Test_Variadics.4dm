@@ -5,17 +5,25 @@
 // Calls a Foundation variadic method across the component boundary and checks
 //   that every argument arrived. Run it from the Method editor with FPS open.
 
-// Only Fnd_Log_AddEntry is exercised, deliberately. It is the one variadic that
-//   leaves evidence a host can read back, so it proves the boundary end to end
-//   rather than merely proving the call did not error. The other six need either
-//   an open form or setup that would obscure what is being tested.
+// Fnd_Msg_PackParameters is the subject: it takes any number of text arguments
+//   and returns them joined by a delimiter, so the answer comes straight back
+//   and nothing sits between the call and the assertion.
 
-// What is actually under test is the seam between numbered and named parameter
-//   access. Under the classic declaration $1 is copied into a named local; under
-//   the ellipsis form that copy is a self-assignment. An alias line commented on
-//   the wrong side leaves arguments empty AND STILL COMPILES, so only a call
-//   finds it. Fnd_Log_AddEntry loops ${$i} from 2 to Count parameters, so a
-//   mistake shows up as missing trailing fields rather than as an error.
+// It replaced Fnd_Log_AddEntry, which was tried first because it leaves evidence
+//   on disk. That was the wrong choice: the evidence path is log selection and
+//   then a worker, and Fnd_Log_UseLog is Private, so a host cannot select a log.
+//   The test could not tell "the arguments did not arrive" from "logging wrote
+//   nowhere" — the instrument was entangled with the subject.
+
+// What is under test is the seam between numbered and named parameter access.
+//   Under the classic declaration $1 is copied into a named local; under the
+//   ellipsis form that copy is a self-assignment. An alias line commented on the
+//   wrong side leaves arguments empty AND STILL COMPILES, so only a call finds
+//   it. PackParameters loops ${$i} from 2 to Count parameters, so the symptom is
+//   missing or empty trailing segments rather than an error.
+
+// The assertions deliberately mirror Foundation's own Fnd_Test_PackParameters,
+//   so a difference between the two is a difference the boundary made.
 
 // Access: Private
 
@@ -25,15 +33,13 @@
 // Returns: Nothing
 
 // Created by Wayne Stewart (Claude Opus 5) (2026-08-11)
+// Wayne Stewart (Claude Opus 5) 2026-08-11 - Subject changed from Fnd_Log_AddEntry, whose
+//       evidence path a host cannot drive
 // ----------------------------------------------------
 
 #DECLARE($configuration_t : Text)
 
-var $token_t; $line_t; $logText_t; $found_t; $where_t : Text
-var $logsFolder_folder : 4D.Folder
-var $file_file : 4D.File
-var $files_c; $fields_c : Collection
-var $attempt_i; $expected_i : Integer
+var $delimiter_t; $result_t; $expected_t : Text
 var $configuration_v : Variant
 
 $configuration_v:=$configuration_t
@@ -44,75 +50,31 @@ End if
 
 Fnd_Test_Begin($configuration_v)
 
-  // A token unique to this run, so the assertions cannot match an older line.
-$token_t:="FPSVARIADIC"+Replace string:C233(String:C10(Milliseconds:C459); " "; "")
+  // The delimiter is an interprocess variable inside the component, so a host
+  //   cannot read it. Derive it: two empty arguments pack to the delimiter alone.
+  //   This is also the first assertion — it proves two arguments crossed.
+$delimiter_t:=Fnd_Msg_PackParameters(""; "")
+Fnd_Test_Assert($delimiter_t#""; "two empty arguments should pack to the delimiter alone, but gave an empty string - either the second argument did not arrive or the delimiter is empty")
 
-  // Fnd_Log_Enable is Shared; Fnd_Log_UseLog is not, so the host cannot choose
-  //   the log and has to find whichever one Foundation is writing to.
-Fnd_Log_Enable(True:C214)
+  // One argument comes back unchanged.
+$result_t:=Fnd_Msg_PackParameters("message")
+Fnd_Test_Assert($result_t="message"; "one argument should come back unchanged but gave \""+$result_t+"\"")
 
-Fnd_Log_AddEntry($token_t+"-one")
-Fnd_Log_AddEntry($token_t+"-two"; "second")
-Fnd_Log_AddEntry($token_t+"-five"; "second"; "third"; "fourth"; "fifth")
+  // Two arguments, joined.
+$result_t:=Fnd_Msg_PackParameters("message"; "one")
+$expected_t:="message"+$delimiter_t+"one"
+Fnd_Test_Assert($result_t=$expected_t; "two arguments should be joined by the delimiter but gave \""+$result_t+"\"")
 
-  // The entry is handed to a worker, so the file is written after the call
-  //   returns. Poll rather than assume, and rather than sleeping a fixed time.
-$logsFolder_folder:=Folder:C1567(fk logs folder:K87:17)
-$where_t:=$logsFolder_folder.platformPath
-$found_t:=""
+  // Four arguments, in order. This is the case that fails when the declaration
+  //   form is wrong: the trailing ones go missing rather than the call erroring.
+$result_t:=Fnd_Msg_PackParameters("message"; "one"; "two"; "three")
+$expected_t:="message"+$delimiter_t+"one"+$delimiter_t+"two"+$delimiter_t+"three"
+Fnd_Test_Assert($result_t=$expected_t; "four arguments should be joined in order but gave \""+$result_t+"\"")
 
-For ($attempt_i; 1; 20)
-
-	If ($found_t="")
-		DELAY PROCESS:C323(Current process:C322; 15)
-		$files_c:=$logsFolder_folder.files()
-
-		For each ($file_file; $files_c) Until ($found_t#"")
-
-			If (Position:C15(".txt"; $file_file.name)>0)
-				$logText_t:=$file_file.getText("UTF-8")
-
-				If (Position:C15($token_t; $logText_t)>0)
-					$found_t:=$logText_t
-				End if
-
-			End if
-
-		End for each
-
-	End if
-
-End for
-
-Fnd_Test_Assert($found_t#""; "the log entries should reach a file in "+$where_t+" but no file contained "+$token_t)
-
-If ($found_t#"")
-
-	  // One argument. The line is timestamp, tab, the argument.
-	$line_t:=Fnd_Test_LineWith($found_t; $token_t+"-one")
-	$fields_c:=Split string:C1554($line_t; "\t")
-	Fnd_Test_Assert($fields_c.length=2; "a one-argument call should log 2 fields but logged "+String:C10($fields_c.length)+" - "+$line_t)
-
-	  // Two arguments.
-	$line_t:=Fnd_Test_LineWith($found_t; $token_t+"-two")
-	$fields_c:=Split string:C1554($line_t; "\t")
-	Fnd_Test_Assert($fields_c.length=3; "a two-argument call should log 3 fields but logged "+String:C10($fields_c.length)+" - "+$line_t)
-	Fnd_Test_Assert($fields_c[2]="second"; "the second argument should be \"second\" but is \""+$fields_c[2]+"\"")
-
-	  // Five arguments. This is the case that fails when the declaration form is
-	  //   wrong: the trailing ones go missing rather than the call erroring.
-	$line_t:=Fnd_Test_LineWith($found_t; $token_t+"-five")
-	$fields_c:=Split string:C1554($line_t; "\t")
-	$expected_i:=6
-	Fnd_Test_Assert($fields_c.length=$expected_i; "a five-argument call should log "+String:C10($expected_i)+" fields but logged "+String:C10($fields_c.length)+" - "+$line_t)
-
-	If ($fields_c.length=$expected_i)
-		Fnd_Test_Assert($fields_c[2]="second"; "argument 2 should be \"second\" but is \""+$fields_c[2]+"\"")
-		Fnd_Test_Assert($fields_c[3]="third"; "argument 3 should be \"third\" but is \""+$fields_c[3]+"\"")
-		Fnd_Test_Assert($fields_c[4]="fourth"; "argument 4 should be \"fourth\" but is \""+$fields_c[4]+"\"")
-		Fnd_Test_Assert($fields_c[5]="fifth"; "argument 5 should be \"fifth\" but is \""+$fields_c[5]+"\"")
-	End if
-
-End if
+  // Read the segments back, which exercises the boundary in the other direction.
+$result_t:=Fnd_Msg_PackParameters("message"; "one"; "two")
+Fnd_Test_Assert(Fnd_Msg_GetParameter($result_t; 1)="message"; "segment 1 should be \"message\" but is \""+Fnd_Msg_GetParameter($result_t; 1)+"\"")
+Fnd_Test_Assert(Fnd_Msg_GetParameter($result_t; 2)="one"; "segment 2 should be \"one\" but is \""+Fnd_Msg_GetParameter($result_t; 2)+"\"")
+Fnd_Test_Assert(Fnd_Msg_GetParameter($result_t; 3)="two"; "segment 3 should be \"two\" but is \""+Fnd_Msg_GetParameter($result_t; 3)+"\"")
 
 Fnd_Test_End

@@ -18,9 +18,11 @@ If (Current process name:C1392=$DesiredProcessName_t)
 	RELOAD PROJECT:C1739
 	DELAY PROCESS:C323(Current process:C322; 30)
 	
+	
+	
 	Fnd_Test_Variadics
 	
-	ALERT:C41("Done")
+	
 	
 Else 
 	// This version allows for any number of processes
