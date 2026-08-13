@@ -45,7 +45,7 @@ If (Storage:C1525.fpsTest#Null:C1517)
 		"failed"; Storage:C1525.fpsTest.failed; \
 		"success"; (Storage:C1525.fpsTest.failed=0) && (Storage:C1525.fpsTest.passed>0); \
 		"failures"; Storage:C1525.fpsTest.assertions.copy(); \
-		"completedAt"; String:C10(Current date:C33; ISO date:K1:8)+"T"+String:C10(Current time:C178))
+		"completedAt"; Fnd_Test_Stamp)
 	
 	$name_t:="fpsTest-"+$result_o.stamp.v4D\
 		+"-host"+(($result_o.stamp.hostCompiled) ? "Compiled" : "Interpreted")\
